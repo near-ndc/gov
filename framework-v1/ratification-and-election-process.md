@@ -1,11 +1,11 @@
 # Ratification and Election Process
 
-The document describes how the process and timeline and process for the NDC v1 ratification. That includes:
+For v1 governance, there is a need to ratify the Constitution and elect the houses. Our goal is to enpower NEAR community for that process rather than having it centrally appointed by a few entities (as that would be against the ethos of the NDC).
+
+Today we don’t have a good way to measure the community voice that is available and not gameable. Eventually, our preference is quadratic voting by human-verified accounts. Until then, we propose v1 NDC voting as described below. That includes:
 
 - [Constitution](https://github.com/near-ndc/constitution) Ratification
-- Election for House of Merit and Council of Advisors
-
-TODO: set amount of members for each house.
+- Election for House of Merit (15 seats) and Council of Advisors (7 seats)
 
 ## Roadmap
 
@@ -33,11 +33,22 @@ TODO: set amount of members for each house.
 
 _Voting Body_ is the NEAR Ecosystem general assembly for elections, referendums, and voting comprised of every NEAR Account (account) designated as a voting account.
 
-Voting is happening on chain. For v1, the Voting Body is set of accounts staking NEAR, except staking pools and other identified smart contracts and entities who are known to aggregate stake.
+Voting is happening on chain. For v1, the Voting Body is set of accounts staking NEAR (delegated to validators), except staking pools and other identified smart contracts and entities who are known to aggregate stake. The system is being built collaboratively by Proximity Labs and the GWG.
 
-The voting mechanism is stake weighted voting. Each account has a variable voting power determined by the amount of NEAR staked at the block height specified in a proposal. Instead of one account = one vote credit, which is gameable in pseudo anonymous world of blockchains (accounts are easy to forge, a proper solution will require human gating mechanism, which is part of the v2 Framework), each account will cast power vote.
+The voting mechanism is `stake weighted voting`. Each account has a variable voting power determined by the amount of NEAR staked at the block height specified in a proposal. Instead of one account = one vote credit, which is gameable in pseudo anonymous world of blockchains (accounts are easy to forge, a proper solution will require human gating mechanism, which is part of the v2 Framework), each account will cast power vote.
 
 Each proposal will have `start_time` and `end_time`. Vote cast can only happen between `start_time` and `end_time` (inclusively).
+
+There are multiple thresholds and quorums for stake-weighted voting:
+
+- **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `5%` of all Staked NEAR on the NEAR Blockchain.
+- **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `8%` of all Staked NEAR on the NEAR Blockchain.
+- **NEAR Supermajority Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
+  - the NEAR Big Quorum Requirement is met;
+  - `#yes_votes >= 60% × (#yes+#no_votes)` of all casted votes
+- **NEAR Consent** -- similar to Supermajority Consent:
+  - the NEAR Quorum Requirement is met
+  - `#yes_votes > #no_votes` of all casted votes
 
 ### Constitution
 
@@ -47,15 +58,10 @@ Each account can vote multiple times withing the proposal voting period. Each su
 When casting a vote, an account allocates credits equal to his/her voting power to the selected option.
 Example: if a voter has 10stake and cast vote by selecting _yes_, the smart contract `#yes` counter will increase by 10 and will add the voters' account to the set of account who already voted.
 
-The proposal passes if both conditions below are met:
+The proposal passes when **NEAR Supermajority Consent** is met:
 
-- Quorum = 8%: means that sum of all voted stake
-
-        #yes + #no + #abstain>= 0.1 x total_staked_near
-
-- Threshold = 60%: means that:
-
-        #yes > 0.6 x (#yes + #no)
+    quorum:    #yes + #no + #abstain>= 0.08 x total_staked_near
+    threshold: #yes > 0.6 x (#yes + #no)
 
 Example of a proposal passing (assuming there are 500 stake in total):
 
@@ -71,13 +77,21 @@ Example of a proposal NOT passing (assuming there are 500 stake in total):
 
 There will be 2 proposals in a StakeWeight Ranking smart contract: one for House of Merit and the second one for Council of Advisors. Each proposal will be filled with a list of candidates who are running for elections.
 
-Each account from the _Voting Body_ will be able to cast 1 vote and support maximum 10 candidates by dividing his/her stake credits between the candidates. Contract tally will happen in real time: candidates will be sorted by rank in the smart contract. In the House of Merits proposal, top `X` (TODO: to be defined) candidates will be selected as the members of the house. Similarly, top `Y` will be selected for Council of Advisors.
+Each account from the _Voting Body_ will be able to cast 1 vote and support maximum 10 candidates by dividing his/her stake credits between the candidates. Contract tally will happen in real time: candidates will be sorted by rank in the smart contract. In the House of Merits proposal, top `15` candidates will be selected as the members of the house. Similarly, top `7` will be selected for Council of Advisors.
 
 Example: we have 50 candidates: `c1, c2, ..., c50`.
 
 - Voter1 has 100stake and will cast his vote by providing whole support for candidate `c10`: after that, `c1` score will increase by 100.
 - Voter2 has 200stake and will cast his vote by providing 50stake support for candidate `c1`, 20stake support for candidate `c20` and 140stake support for candidate `c21`. After that, `c1` score will increase by 50, `c20` score will increase by 20 and `c21` score will increase by 140.
 
+### Other voting proposals
+
+The NDC will be able to vote on other proposals such us:
+
+- Approve The Term Budget for Congress - NEAR Quorum Requirement
+- Approve Protocol Changes - NEAR Quorum Requirement
+
 ## Transparency Commission
 
 TODO: provide process of electing the Transparency Commission
+7 seats
