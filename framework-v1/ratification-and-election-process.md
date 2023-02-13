@@ -59,10 +59,14 @@ Below we define requirements for various There are multiple thresholds and quoru
 
 For Personhood Voting:
 
-- **NDC Approved Account**: verified personhood accounts using [ GoodDollar | Verisoul (waiting for final decision)] technology. [TODO: need to double check if we want to add additional requirement about the account history or stake, but that will again complexify the system and will require blockchain snapshot + proof verifier]/
+- **NDC Approved Account**: verified personhood accounts using a combination of all of the following criteria
+   -  Account owner has passed KYC and been verified as 16 years or older (for clarity: no need for any other KYC datapoints)  
+   -  Account owner has been verified as unique by using a Face Verification software, compared agains all other verified users [GoodDollar | Verisoul (waiting for final decision)]
+   -  Account has staked 1 NEAR or more
+   -  [TODO: need to double check if we want to add additional requirement about the account history or stake, but that will again complexify the system and will require blockchain snapshot + proof verifier]
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
-- **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 4000 ] verified personhood accounts using [ GoodDollar | Verisoul (waiting for final decision)].
-- **NEAR Supermajority Consent** and means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
+- **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 4000 ] NDC Approved Accounts
+- **NEAR Supermajority Consent** and means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote: t
   - the NEAR Big Quorum Requirement is met;
   - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes
 - **NEAR Consent** -- similar to Supermajority Consent:
