@@ -2,7 +2,7 @@
 
 **Status: Draft**
 
-We still need to decide about the voting mechanism: Stake Weighted Voting (SWV) or Personhood Voting (PV).
+We still need to decide about the voting mechanism: [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./personhood-voting.md) (**PV**).
 This document in few places assumes SWV (especially the roadmap, which needs to be updated).
 
 ## Synopsis
@@ -42,7 +42,7 @@ _Voting Body_ is the NEAR Ecosystem general assembly for elections, referendums,
 
 Voting is happening on chain. For v1, the Voting Body is set of accounts staking NEAR (delegated to validators), except staking pools and other identified smart contracts and entities who are known to aggregate stake.
 
-The voting mechanism is either `stake weighted voting` or `personhood voting` (active discussion).
+The voting mechanism is either [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./personhood-voting.md) (**PV**) (active discussion).
 
 Each proposal will have `start_time` and `end_time`. Vote cast can only happen between `start_time` and `end_time` (inclusively).
 
