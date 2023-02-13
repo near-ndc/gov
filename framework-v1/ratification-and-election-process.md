@@ -12,7 +12,10 @@ For v1 governance, there is a need to ratify the Constitution and elect the hous
 Today we don’t have a good way to measure the community voice that is available and not gameable. Eventually, our preference is quadratic voting by human-verified accounts. Until then, we propose v1 NDC voting as described below. That includes:
 
 - [Constitution](https://github.com/near-ndc/constitution) Ratification
-- Election for House of Merit (15 seats) and Council of Advisors (7 seats)
+- Community Treasury Ratification
+- Community Treasury directive to issue funds (if not directed by House of Merit) 
+- Election for House of Merit (15 seats) and Council of Advisors (7 seats) and Transparency Commission
+- Veto 
 
 ## Roadmap
 
@@ -42,22 +45,26 @@ _Voting Body_ is the NEAR Ecosystem general assembly for elections, referendums,
 
 Voting is happening on chain. For v1, the Voting Body is set of accounts staking NEAR (delegated to validators), except staking pools and other identified smart contracts and entities who are known to aggregate stake.
 
-The voting mechanism is either [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./personhood-voting.md) (**PV**) (active discussion).
+The voting mechanism is either [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./proof-of-personhood-voting.md) (**PPV**) (active discussion).
 
 Each proposal will have `start_time` and `end_time`. Vote cast can only happen between `start_time` and `end_time` (inclusively).
 
-Below we define requirements for various There are multiple thresholds and quorums for stake-weighted voting:
+Below we define requirements for three different scenarios. 
+
+For Stake-Weighted voting:
 
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `5%` of all Staked NEAR on the NEAR Blockchain.
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `8%` of all Staked NEAR on the NEAR Blockchain.
-- **NEAR Supermajority Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
-  - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes
+- **NEAR Supermajority Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and the following apply in respect of that vote:
+   - 1 Staked NEAR = 1 vote;
+   - the NEAR Big Quorum Requirement is met;
+   - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes)
 - **NEAR Consent** -- similar to Supermajority Consent:
-  - the NEAR Quorum Requirement is met
-  - `#yes_votes > #no_votes` of all cast votes
+   - 1 Staked NEAR = 1 vote;
+   - the NEAR Quorum Requirement is met
+   - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes)
 
-For Personhood Voting:
+For Proof-of-Personhood Voting:
 
 - **NDC Approved Account**: verified personhood accounts using a combination of all of the following criteria
    -  Account owner has passed KYC and been verified as 16 years or older (for clarity: no need for any other KYC datapoints)  
@@ -66,16 +73,18 @@ For Personhood Voting:
    -  [TODO: need to double check if we want to add additional requirement about the account history or stake, but that will again complexify the system and will require blockchain snapshot + proof verifier]
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 4000 ] NDC Approved Accounts
-- **NEAR Supermajority Consent** and means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote: t
-  - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes
+- **NEAR Supermajority Consent** and means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
+   - 1 NDC Approved Account = 1 vote;
+   - the NEAR Big Quorum Requirement is met;
+   - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes)
 - **NEAR Consent** -- similar to Supermajority Consent:
-  - the NEAR Quorum Requirement is met
-  - `#yes_votes > #no_votes` of all cast votes
+   - 1 NDC Approved Account = 1 vote;
+   - the NEAR Quorum Requirement is met
+   - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes)
 
 For Personhood Voting with Stake Weight Quorum:
 
-- **NDC Approved Account**: has the same meaning as above.
+- **NDC Approved Account**: has the same meaning as for _Proof-of-Personhood Voting_ above.
 - **NEAR Quorum Power** is the sum of cubic root of the staked NEAR of each voting NDC approved account that had staked at the time pointed the proposal (resolved as a snapshot). The each voting account
 
         struct Proposal {
@@ -91,7 +100,7 @@ For Personhood Voting with Stake Weight Quorum:
 
 - **NEAR Quorum Requirement** means, in respect of a vote, that the Quorum Power must be greater than the Quorum Threshold which is defined as the cubic root of (5% of all staked NEAR) plus 2000.
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that the Quorum Power must be greater than the Quorum Threshold which is defined as the cubic root of (8% of all staked NEAR) plus 2000.
-- **NEAR Supermajority Consent** and **NEAR Consent** have the same meaning as in _Personhood Voting_
+- **NEAR Supermajority Consent** and **NEAR Consent** have the same meaning as in _Proof-of-Personhood Voting_ above
 
 ### Constitution
 
