@@ -2,8 +2,9 @@
 
 **Status: Draft**
 
-We still need to decide about the voting mechanism: [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./personhood-voting.md) (**PV**).
-This document in few places assumes SWV (especially the roadmap, which needs to be updated).
+For Proof of Concept we decided to use [Personhood Voting](./personhood-voting.md) (**PV**).
+Our early design included [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**).
+This document in few places still mentions SWV (especially the roadmap, which needs to be updated).
 
 ## Synopsis
 
