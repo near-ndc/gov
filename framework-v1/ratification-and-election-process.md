@@ -63,9 +63,9 @@ For Stake-Weighted voting:
 
 For Proof-of-Personhood Voting:
 
-- **NDC Approved Account**: verified personhood accounts passing criteria mentioned in [personhood voting](./personhood-voting.md)
-- **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
-- **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 4000 ] NDC Approved Accounts
+- **NDC Approved Account**: a proof of personhood verified account.
+- **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 1000 ] NDC Approved Accounts
+- **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
 - **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NDC, where a vote of the NDC in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
   - the NEAR Quorum Requirement is met;
   - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes).
