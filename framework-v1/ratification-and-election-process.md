@@ -13,9 +13,9 @@ Today we don’t have a good way to measure the community voice that is availabl
 
 - [Constitution](https://github.com/near-ndc/constitution) Ratification
 - Community Treasury Ratification
-- Community Treasury directive to issue funds (if not directed by House of Merit) 
+- Community Treasury directive to issue funds (if not directed by House of Merit)
 - Election for House of Merit (15 seats) and Council of Advisors (7 seats) and Transparency Commission
-- Veto 
+- Veto
 
 ## Roadmap
 
@@ -43,48 +43,38 @@ Today we don’t have a good way to measure the community voice that is availabl
 
 _Voting Body_ is the NEAR Ecosystem general assembly for elections, referendums, and voting comprised of every NEAR Account (account) designated as a voting account.
 
-Voting is happening on chain. For v1, the Voting Body is set of accounts staking NEAR (delegated to validators), except staking pools and other identified smart contracts and entities who are known to aggregate stake.
-
-The voting mechanism is either [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) or [Personhood Voting](./proof-of-personhood-voting.md) (**PPV**) (active discussion).
+Voting happens on chain. The voting mechanism and the Voting Body is defined in [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) and [Personhood Voting](./personhood-voting.md) (**PV**) (active discussion).
 
 Each proposal will have `start_time` and `end_time`. Vote cast can only happen between `start_time` and `end_time` (inclusively).
 
-Below we define requirements for three different scenarios. 
+Below we define requirements for three different scenarios.
 
 For Stake-Weighted voting:
 
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `5%` of all Staked NEAR on the NEAR Blockchain.
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `8%` of all Staked NEAR on the NEAR Blockchain.
-- **NEAR Supermajority Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and the following apply in respect of that vote:
-   - 1 Staked NEAR = 1 vote;
-   - the NEAR Big Quorum Requirement is met;
-   - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes)
-- **NEAR Consent** -- similar to Supermajority Consent:
-   - 1 Staked NEAR = 1 vote;
-   - the NEAR Quorum Requirement is met
-   - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes)
+- **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
+  - the NEAR Quorum Requirement is met;
+  - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes).
+- **NEAR Supermajority Consent** -- similar to Supermajority Consent:
+  - the NEAR Big Quorum Requirement is met;
+  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes).
 
 For Proof-of-Personhood Voting:
 
-- **NDC Approved Account**: verified personhood accounts using a combination of all of the following criteria
-   -  Account owner has passed KYC and been verified as 16 years or older (for clarity: no need for any other KYC datapoints)  
-   -  Account owner has been verified as unique by using a Face Verification software, compared agains all other verified users [GoodDollar | Verisoul (waiting for final decision)]
-   -  Account has staked 1 NEAR or more
-   -  [TODO: need to double check if we want to add additional requirement about the account history or stake, but that will again complexify the system and will require blockchain snapshot + proof verifier]
+- **NDC Approved Account**: verified personhood accounts passing criteria mentioned in [personhood voting](./personhood-voting.md)
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 4000 ] NDC Approved Accounts
-- **NEAR Supermajority Consent** and means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
-   - 1 NDC Approved Account = 1 vote;
-   - the NEAR Big Quorum Requirement is met;
-   - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes)
-- **NEAR Consent** -- similar to Supermajority Consent:
-   - 1 NDC Approved Account = 1 vote;
-   - the NEAR Quorum Requirement is met
-   - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes)
+- **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NDC, where a vote of the NDC in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
+  - the NEAR Quorum Requirement is met;
+  - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes).
+- **NEAR Supermajority Consent** -- similar to Supermajority Consent:
+  - the NEAR Big Quorum Requirement is met;
+  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes).
 
 For Personhood Voting with Stake Weight Quorum:
 
-- **NDC Approved Account**: has the same meaning as for _Proof-of-Personhood Voting_ above.
+- **NDC Approved Account**: has the same meaning as in _Proof-of-Personhood Voting_ above.
 - **NEAR Quorum Power** is the sum of cubic root of the staked NEAR of each voting NDC approved account that had staked at the time pointed the proposal (resolved as a snapshot). The each voting account
 
         struct Proposal {
@@ -100,7 +90,7 @@ For Personhood Voting with Stake Weight Quorum:
 
 - **NEAR Quorum Requirement** means, in respect of a vote, that the Quorum Power must be greater than the Quorum Threshold which is defined as the cubic root of (5% of all staked NEAR) plus 2000.
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that the Quorum Power must be greater than the Quorum Threshold which is defined as the cubic root of (8% of all staked NEAR) plus 2000.
-- **NEAR Supermajority Consent** and **NEAR Consent** have the same meaning as in _Proof-of-Personhood Voting_ above
+- **NEAR Supermajority Consent** and **NEAR Consent** have the same meaning as in _Proof-of-Personhood Voting_ above.
 
 ### Constitution
 
@@ -131,7 +121,7 @@ Example of a proposal NOT passing (assuming there are 500 stake in total):
 
 TODO: this
 
-There will be 2 proposals in a StakeWeight Ranking smart contract: one for House of Merit and the second one for Council of Advisors. Each proposal will be filled with a list of candidates who are running for elections.
+There will be 2 proposals in a Ranking smart contract: one for House of Merit and the second one for Council of Advisors. Each proposal will be filled with a list of candidates who are running for elections.
 
 Each account from the _Voting Body_ will be able to cast 1 vote and support maximum 10 candidates by dividing his/her stake credits between the candidates. Contract tally will happen in real time: candidates will be sorted by rank in the smart contract. In the House of Merits proposal, top `15` candidates will be selected as the members of the house. Similarly, top `7` will be selected for Council of Advisors.
 
@@ -146,7 +136,8 @@ The NDC will be able to vote on other proposals such us:
 
 - Approve The Term Budget for Congress - NEAR Quorum Requirement
 - Approve Protocol Changes - NEAR Quorum Requirement
-  TODO: maybe we will push this to v2 to reduce complexity in v1.
+
+TODO: maybe we will push this to v2 to reduce complexity in v1.
 
 ## Transparency Commission
 
