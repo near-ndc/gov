@@ -43,40 +43,38 @@ Today we don’t have a good way to measure the community voice that is availabl
 ## Voting
 
 _Voting Body_ is the NEAR Ecosystem general assembly for elections, referendums, and voting comprised of every NEAR Account (account) designated as a voting account.
-
 Voting happens on chain. The voting mechanism and the Voting Body is defined in [Stake Weighted Voting](./stake-weighted-voting.md) (**SWV**) and [Personhood Voting](./personhood-voting.md) (**PV**) (active discussion).
-
 Each proposal will have `start_time` and `end_time`. Vote cast can only happen between `start_time` and `end_time` (inclusively).
 
 Below we define requirements for three different scenarios.
 
-For Stake-Weighted voting:
+#### Stake-Weighted Thresholds
 
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `5%` of all Staked NEAR on the NEAR Blockchain.
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `8%` of all Staked NEAR on the NEAR Blockchain.
 - **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
   - the NEAR Quorum Requirement is met;
-  - `#yes_votes > #no_votes`.
+  - the number of "yes" votes cast is more than 50% of the sum of "yes" and "no" votes: `#yes_votes > #no_votes` (we don't consider abstain votes for the threshold).
 - **NEAR Supermajority Consent** -- similar to Supermajority Consent:
   - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes > 60% × (#yes+#no_votes)`, that means amount of all "yes" votes is bigger than 60% the sum of "yes" and "no" votes (we don't consider abstain votes for the threshold).
+  - the number of "yes" votes cast is more than 60% of the sum of "yes" and "no" votes: `#yes_votes > 60% × (#yes_votes + #no_votes)` (we don't consider abstain votes for the threshold).
 
-For Proof-of-Personhood Voting:
+#### Proof-of-Personhood Voting Thresholds
 
 - **NDC Approved Account**: a proof of personhood verified account.
 - **NEAR Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 1000 ] NDC Approved Accounts
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
 - **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NDC, where a vote of the NDC in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
   - the NEAR Quorum Requirement is met;
-  - `#yes_votes > #no_votes`.
+  - the number of "yes" votes cast is more than 50% of the sum of "yes" and "no" votes: `#yes_votes > #no_votes` (we don't consider abstain votes for the threshold).
 - **NEAR Supermajority Consent** -- similar to Supermajority Consent:
   - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes > 60% × (#yes+#no_votes)`, that means amount of all "yes" votes is bigger than 60% the sum of "yes" and "no" votes (we don't consider abstain votes for the threshold).
+  - the number of "yes" votes cast is more than 60% of the sum of "yes" and "no" votes: `#yes_votes > 60% × (#yes_votes + #no_votes)` (we don't consider abstain votes for the threshold).
 
-For Personhood Voting with Stake Weight Quorum:
+#### Personhood Voting with Stake Weight Quorum Thresholds
 
 - **NDC Approved Account**: has the same meaning as in _Proof-of-Personhood Voting_ above.
-- **NEAR Quorum Power** is the sum of cubic root of the staked NEAR of each voting NDC approved account that had staked at the time pointed the proposal (resolved as a snapshot). The each voting account
+- **NEAR Quorum Power** is the sum of cubic root of the staked NEAR of each voting NDC approved account that had staked at the time pointed the proposal (resolved as a snapshot).
 
         struct Proposal {
             // ...
@@ -138,8 +136,6 @@ Example of a proposal NOT passing (assuming there are 500 stake in total):
     yes=8stake, no=2stake, abstain=20stake   – not enough quorum
 
 ### House of Merit and Council of Advisors
-
-TODO: this
 
 There will be 2 proposals in a Ranking smart contract: one for House of Merit and the second one for Council of Advisors. Each proposal will be filled with a list of candidates who are running for elections.
 
