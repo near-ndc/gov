@@ -56,10 +56,10 @@ For Stake-Weighted voting:
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by the holders of at least `8%` of all Staked NEAR on the NEAR Blockchain.
 - **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NEAR Community, where a vote of the NEAR Community in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
   - the NEAR Quorum Requirement is met;
-  - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes).
+  - `#yes_votes > #no_votes`.
 - **NEAR Supermajority Consent** -- similar to Supermajority Consent:
   - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes).
+  - `#yes_votes > 60% × (#yes+#no_votes)`, that means amount of all "yes" votes is bigger than 60% the sum of "yes" and "no" votes (we don't consider abstain votes for the threshold).
 
 For Proof-of-Personhood Voting:
 
@@ -68,10 +68,10 @@ For Proof-of-Personhood Voting:
 - **NEAR Big Quorum Requirement** means, in respect of a vote, that votes are cast by at least [ 2000 ] NDC Approved Accounts
 - **NEAR Consent** means the approval of a proposal (including a Community Proposal), matter and/or decision by the NDC, where a vote of the NDC in relation to that proposal (including a Community Proposal), matter and/or decision takes place and both of the following apply in respect of that vote:
   - the NEAR Quorum Requirement is met;
-  - `#yes_votes > #no_votes` of all cast votes (#yes+#no+#abstain_votes).
+  - `#yes_votes > #no_votes`.
 - **NEAR Supermajority Consent** -- similar to Supermajority Consent:
   - the NEAR Big Quorum Requirement is met;
-  - `#yes_votes >= 60% × (#yes+#no_votes)` of all cast votes (#yes+#no+#abstain_votes).
+  - `#yes_votes > 60% × (#yes+#no_votes)`, that means amount of all "yes" votes is bigger than 60% the sum of "yes" and "no" votes (we don't consider abstain votes for the threshold).
 
 For Personhood Voting with Stake Weight Quorum:
 
@@ -100,7 +100,26 @@ Constitution Proposal will provide 3 options: `yes`, `no` and `abstain`. The rea
 Each account can vote multiple times withing the proposal voting period. Each subsequent vote will overwrite the previous one.
 When casting a vote, an account allocates credits equal to his/her voting power to the selected option.
 
-Examples above assume SWV for quorum.
+#### Examples with PV
+
+A voter passed a personhood verification and cast vote by selecting _yes_, the smart contract `#yes` counter will increase by 1 and will add the voters' account to the set of account who already voted, prohibiting him casting another vote.
+The proposal passes when **NEAR Supermajority Consent** is met:
+
+    quorum:    #yes + #no + #abstain >= 2000
+    threshold: #yes > 0.6 x (#yes + #no)
+
+Examples of a proposal passing (assuming 500 personhood verified accounts voted):
+
+    yes=65accounts, no=35accounts, abstain=10accounts
+    yes=8accounts, no=2accounts, abstain=50accounts
+
+Example of a proposal NOT passing (assuming 500 personhood verified accounts voted):
+
+    yes=260accounts, no=240accounts, abstain=0        – didn’t pass the threshold
+    yes=60accounts, no=40accounts, abstain=any        – didn’t pass the threshold
+    yes=8accounts, no=2accounts, abstain=20accounts   – not enough quorum
+
+#### Examples with SWV
 
 Example: if a voter has 10stake and cast vote by selecting _yes_, the smart contract `#yes` counter will increase by 10 and will add the voters' account to the set of account who already voted.
 The proposal passes when **NEAR Supermajority Consent** is met:
@@ -110,13 +129,13 @@ The proposal passes when **NEAR Supermajority Consent** is met:
 
 Example of a proposal passing (assuming there are 500 stake in total):
 
-    yes=65stake, no=35stake, abstain=10
-    yes=8stake, no=2stake, abstain=50
+    yes=65stake, no=35stake, abstain=10stake
+    yes=8stake, no=2stake, abstain=50stake
 
 Example of a proposal NOT passing (assuming there are 500 stake in total):
 
-    yes=60stake, no=40stake, abstain=any   – didn’t pass the threshold
-    yes=8stake, no=2stake, abstain=20   – not enough quorum
+    yes=60stake, no=40stake, abstain=any     – didn’t pass the threshold
+    yes=8stake, no=2stake, abstain=20stake   – not enough quorum
 
 ### House of Merit and Council of Advisors
 
