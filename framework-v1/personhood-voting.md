@@ -35,13 +35,14 @@ We [analyzed](https://docs.google.com/document/d/111ZAJY8iqhUqo7oqF_RSaR1BX5dILt
 - Low cost.
 
 Throughout our analysis, we decided to use a FaceTech system. Other solutions either don't provide sufficient uniqueness guarantees (community networks, you can setup many accounts with KYC providers), require additional data collection requirements on our side (KYC providers) or are not sufficiently decentralized or battle tested.
-The final [decision](https://docs.google.com/document/d/1ccPlRPvQCRsJTnoeaGYHrNYb27mjWK7aaUC4Aiw8f2U/edit?usp=sharing_eip_m&ts=63e6e810) has been drafted between GoodDollar and Verisoul. For the PoC we selected GoodDollar.
+For the Proof of Concept a [decision](https://docs.google.com/document/d/1ccPlRPvQCRsJTnoeaGYHrNYb27mjWK7aaUC4Aiw8f2U/edit?usp=sharing_eip_m&ts=63e6e810) has been drafted between GoodDollar and Verisoul and GoodDollar was selected.
 NOTE: There is no NEAR native FaceTech provider (meaning that the provider issues a certificate directly on NEAR). Below we discuss an Oracle system responsible for issuing such a certificate in a form of SBT.
 
-#### v1 NDC Personhood Criteria
+After PoC, in order to streamline the onboarding process, we followed the community recommendation and migrated to Fractal. Both Fractal and GoodDollar are using the same technology provider for Face Scan.
 
-- Account owner has been verified as unique, compared against all other verified users, using GoodDollar.
-- Account has staked 1 NEAR in the voting contract.
+### NDC Personhood Criteria
+
+- Account owner has been verified as unique, compared against all other verified users, using Fractal Face Scan.
 
 ### NEAR affiliation measures
 
@@ -58,38 +59,31 @@ We restrain from including them in v1 because it will significantly complexify t
 
 ### Oracle
 
-To bridge GoodDollar FaceTech identity to NEAR we need an oracle. I will act as a middleware between the GoodDollar blockchain system and NEAR blockchain. Requirements:
+To bridge FaceTech identity to NEAR we need an oracle. I will act as a middleware between the Fractal system and NEAR blockchain. Requirements:
 
 - decentralized verification process
-- assuring ownership of the GoodDollar face verified account and NEAR account.
+- assuring ownership of the Fractal face verified account and NEAR account.
 
-We want to assure there is no central party being an Oracle. That would impose the following risks:
+Privacy concerns:
 
-- GoodDollar doesn't provide a metadata, where additional party could link metadata (eg verification data)
-- Verifier being a single point of failure
-- We should make sure that: verifier doesn't link GoodDollar identities to fake or wrong accounts AND doesn't link non existing GoodDollar identities to NEAR accounts.
+- Fractal doesn't provide a face metadata to assure privacy.
+- We should make sure that: verifier doesn't link Fractal identities to fake or wrong accounts AND doesn't link non existing Fractal identities to NEAR accounts.
 
-We design a decentralized oracle. We select multiple, verified parties who will provide oracle service.
-Each oracle has to provide a security stake.
+### Design and Implementation
 
-Verification is done through establishing an authenticated session with GoodDollar and login with NEAR wallet.
+https://github.com/near-ndc/i-am-human/blob/master/contracts/oracle/README.md
 
-- Authentication is established through one of the mechanisms GoodDollar provides. We check OAuth mechanism. (TODO: check if it's possible to login with face check or private key).
-- User has to authenticate with all Oracles to be fully verified.
-- On each positive verification, oracle adds a vote in the SBT smart contract to mint a new SBT.
-- SBT is minted only when all oracles agree.
-
-### Risks
+### Oracle Risks
 
 FaceTech based solution is seen as independent solution, but it's not decentralized. In case of GoodDollar we have the following risks
 
 - reliance on a single personhood verifier
-- oracle risk: censorship, halting the system
+- verifier risks: censorship, halting the system, a single point of failure.
 - additional system variables
 - non trivial NDC Approved Account requirements
 - adding Staked NEAR as a requirement will require implementation of stake weighted voting framework.
 
-### Consequences
+## Consequences
 
 Positive
 
