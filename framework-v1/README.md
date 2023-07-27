@@ -9,6 +9,7 @@ Links:
 - [Constitution](./framework-v1/constitution.md)
 - [V1 Governance Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
 - [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0)
+- [Gov Ops Manual](https://docs.google.com/document/d/1l5g7JhaEPUMzjrzXEKw2Za5UmuRyK_9qxj-2-2CxlOE/edit?usp=drivesdk)
 - [Community Treasury](./framework-v1/community-treasury.md)
 - [List of links and documents](https://thewiki.near.page/gwg-docs)
 
