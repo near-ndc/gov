@@ -77,24 +77,6 @@ Nomination starts the NDC v1 governance process and runs for 50 days and allow t
 
 The main ways to participate in the NDC election are of course voting for candidates or running as a candidate, but there’s a lot more to it than just that. Through our Nominations platform, voters and candidates will be able to engage with one another discussing policy positions and contribute to candidacy social proof through commenting or upvoting.
 
-### FAQ
-
-#### What should I consider before voting for a candidate?
-
-Just like in any civic election, you should familiarize yourself with the policy positions of the candidates as well as their backgrounds. All candidates will have been vetted and have an “OG SBT,” but will likely have widely divergent views on the direction of the NDC. Asking questions and commenting on their platforms can also be a valuable way to get clarity on any positions that seem unclear to you.
-
-#### Can I change my vote once I’ve submitted it?
-
-Since all votes are recorded on the blockchain, they are immutable and cannot be changed after submission. Therefore it is in your best interest to triple check your selections before hitting that “submit” button.
-
-#### What procedures will be in place to ensure election integrity?
-
-We would love to see every single person in the NEAR ecosystem vote in NDC elections, but in order to maintain election integrity, there is one important requirement in order to cast a valid ballot. You will need to have a Face-Verified Soul Bound Token (SBT) linked with a NEAR wallet. You may use your main wallet or create a new one explicitly for the purpose of voting.
-
-#### Does Face Verification mean you have a picture of my face connected to my wallet?
-
-No. [I-AM-HUMAN](https://i-am-human.app) does not store your biometrics. You are also free to request the deletion of any and all data collected in this process should you decide to forfeit your FV SBT.
-
 ### Safeguards
 
 It goes without saying that we want as fair and transparent an election as possible. Given that we are remote, and that the internet can be a strange place, there have been certain safeguards implemented into all NDC elections, that deter poor behavior, and also guarantee that bad actors are punished if they are able to manipulate an election. Election integrity can ultimately be broken down into six clear safeguards:
@@ -117,14 +99,46 @@ Pikes Peak review Election results ongoing/after. NEAR is fortunate enough to ha
 
 #### Safeguard 5. Whistleblower program and bounty
 
-In addition to the technical safeguards and Pikespeak oversight, the NDC is also instituting a whistleblower incentive program whereby anyone who has knowledge of potential election fraud can receive a bounty assuming their claims as to people and impact are justified and accurate.
+A proactive initiative is established to counteract users who engage in activities like purchasing votes and other behaviors described in the `fair-voting-policy`. This initiative incorporates incentives for users who report such behaviors, aiming to encourage them to flag these instances and subsequently rewarding them for their vigilance.
+
+Anyone who has knowledge of potential election fraud SHOULD report it. All reports will receive a bounty assuming their claims as to people and impact are justified and accurate.
 
 #### Safeguard 6. Enforcement by Transparency Commission
 
 In the event of any serious election fraud the investigation, and decision to remove, or forever ban either a voter or a candidate, will lie with the Transparency Commission. This means that there is ultimately no escape for a wrongdoer once they have been discovered or accused. The official Transparency Commission process is to field a complaint, investigate the complaint, and then publicly move to either remove, or ban the member in question from further participation.
+
+### FAQ
+
+#### What should I consider before voting for a candidate?
+
+Just like in any civic election, you should familiarize yourself with the policy positions of the candidates as well as their backgrounds. All candidates will have been vetted and have an “OG SBT,” but will likely have widely divergent views on the direction of the NDC. Asking questions and commenting on their platforms can also be a valuable way to get clarity on any positions that seem unclear to you.
+
+#### Can I change my vote once I’ve submitted it?
+
+Since all votes are recorded on the blockchain, they are immutable and cannot be changed after submission. Therefore it is in your best interest to triple check your selections before hitting that “submit” button.
+
+#### What procedures will be in place to ensure election integrity?
+
+We would love to see every single person in the NEAR ecosystem vote in NDC elections, but in order to maintain election integrity, there is one important requirement in order to cast a valid ballot. You will need to have a Face-Verified Soul Bound Token (SBT) linked with a NEAR wallet. You may use your main wallet or create a new one explicitly for the purpose of voting.
+
+#### Does Face Verification mean you have a picture of my face connected to my wallet?
+
+No. [I-AM-HUMAN](https://i-am-human.app) does not store your biometrics. You are also free to request the deletion of any and all data collected in this process should you decide to forfeit your FV SBT.
+
+## Blacklist
+
+A blacklist constitutes a roster of accounts contained within the `Registry` that have been flagged for restriction. Through the application of a ML algorithm or the deliberations of an IAH committee, an account can be added to the blacklist, leading to a suspension of its voting privileges and exclusion from receiving any SBTs. Should an account find itself on the blacklist, there exists a provision for filing an appeal with the committee. Upon approval of the appeal, the user's status will be lifted from the blacklist. For a comprehensive overview, please refer to the detailed I Am Human [Blacklist Specification](https://near-ndc.notion.site/IAH-Flag-Accounts-b5b9c2ff72d14328834e2a0effa22938).
 
 ## Post-Election
 
 Election results will be announced on the NDC’s Medium, Telegram, and Discord and will also be viewable in the Election UI. Winning candidates will be highlighted in green.
 
 After the election results are announced, the elected representatives will convene for the first time in the first NDC governance town hall, where we will hear from elected members from the three branches of NDC governance.
+
+## More links
+
+1. [fair-voting-policy]()
+2. [Registry docs](https://github.com/near-ndc/i-am-human/tree/master/contracts/registry#readme)
+3. [Elections smart contract](https://github.com/near-ndc/voting-v1/tree/master/elections)
+4. [IAH](https://i-am-human.gitbook.io/i-am-human-docs/)
+5. [Whistleblower program]()
