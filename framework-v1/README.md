@@ -6,7 +6,7 @@ After laying this decentralization groundwork, the NDC is gearing up for its fir
 
 Links:
 
-- [Constitution](./framework-v1/constitution.md)
+- [Constitution](./constitution.md)
 - [V1 Governance Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
 - [Elections](#Elections)
   - [voting details](./elections-voting.md)
