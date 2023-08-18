@@ -8,6 +8,8 @@ Links:
 
 - [Constitution](./framework-v1/constitution.md)
 - [V1 Governance Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
+- [Elections](#Elections)
+  - [voting details](./elections-voting.md)
 - [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0)
 - [Gov Ops Manual](https://docs.google.com/document/d/1l5g7JhaEPUMzjrzXEKw2Za5UmuRyK_9qxj-2-2CxlOE/edit?usp=drivesdk)
 - [Community Treasury](./framework-v1/community-treasury.md)
@@ -65,21 +67,17 @@ Nomination starts the NDC v1 governance process and runs for 50 days and allow t
 - Election Period: September 8th – September 22nd, 2023
 - Start of 1st Congress: October 1st – April 1st, 2024
 
+👉 [**Voting Process**](./elections-voting.md)
+
+---
+
 ![Elections Roadmap](./elections-roadmap.jpeg)
 
 ### Participation
 
 The main ways to participate in the NDC election are of course voting for candidates or running as a candidate, but there’s a lot more to it than just that. Through our Nominations platform, voters and candidates will be able to engage with one another discussing policy positions and contribute to candidacy social proof through commenting or upvoting.
 
-### Eligible Voters
-
-Any person with a Face Verified Soul Bound Token (SBT) is eligible to vote, and anyone can get one with a NEAR wallet through I-AM-HUMAN.
-
-TODO: other criteria that are discussed:
-
-- staking
-- bonding
-- activity
+### FAQ
 
 #### What should I consider before voting for a candidate?
 
@@ -89,11 +87,11 @@ Just like in any civic election, you should familiarize yourself with the policy
 
 Since all votes are recorded on the blockchain, they are immutable and cannot be changed after submission. Therefore it is in your best interest to triple check your selections before hitting that “submit” button.
 
-### What procedures will be in place to ensure election integrity?
+#### What procedures will be in place to ensure election integrity?
 
 We would love to see every single person in the NEAR ecosystem vote in NDC elections, but in order to maintain election integrity, there is one important requirement in order to cast a valid ballot. You will need to have a Face-Verified Soul Bound Token (SBT) linked with a NEAR wallet. You may use your main wallet or create a new one explicitly for the purpose of voting.
 
-### Does Face Verification mean you have a picture of my face connected to my wallet?
+#### Does Face Verification mean you have a picture of my face connected to my wallet?
 
 No. [I-AM-HUMAN](https://i-am-human.app) does not store your biometrics. You are also free to request the deletion of any and all data collected in this process should you decide to forfeit your FV SBT.
 
@@ -109,7 +107,7 @@ Voters agreement to not sell votes. On behalf of all voters, holding an I-Am-Hum
 
 On the candidates’ side, they all also agree to not buy votes for their election, and are equally eligible for post-election enforcement if they are found guilty.
 
-#### Safeguard 3. Captcha Oracle
+#### Safeguard 3. Captcha Oracle (not confirmed)
 
 Included in each and every vote, to prevent scripting.
 
