@@ -3,7 +3,7 @@
 ## Flow diagram
 
 ```mermaid
-flowchart LR;
+flowchart TB;
 A[Wallet Login] --> B{IAH Verified?};
 B --> |Yes| C{Blacklisted?};
 B --> |No| D[IAH Verify];
