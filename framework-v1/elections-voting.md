@@ -10,11 +10,11 @@ See [Elections](./README.md#Elections) for general overview of the Nominations, 
    - HoM elections
    - CoA elections
    - TC elections
-   - Setup Package approval. TODO: needs more details.
+   - [Setup Package](./community-treasury.md#funding-hom) approval.
 1. Once the proposals are active (between start and end time), each [eligible voter](#eligible-voters) can cast only one vote per proposals. Votes can not be updated nor recast.
    - When casting a vote, voter must [bond](#bonding) NEAR.
    - Voter must pay for all storage fees.
-1. According to the [safeguards](./README.md#safeguards), Elections Commission will be empowered to [revoke](#vote-revokation) any vote which violates Fair Voting Policy.
+1. According to the [safeguards](./README.md#safeguards), Elections Commission will be empowered to [revoke](#vote-revocation) any vote which violates Fair Voting Policy.
 1. Elections ends after the cooldown period. At this time, results can be queried from the smart contract.
 
 NOTE: Proposals and candidates can only be submitted by the Elections Commission, following the process approved by the community. Candidates must come from the nominations contract.
