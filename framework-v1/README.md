@@ -137,8 +137,8 @@ After the election results are announced, the elected representatives will conve
 
 ## More links
 
-1. [fair-voting-policy]()
+1. [fair-voting-policy](https://bafkreiapsavs6hrc6aomzagub7aumogkfbjewlo2tvwzesr4myshlecfqy.ipfs.nftstorage.link)
 2. [Registry docs](https://github.com/near-ndc/i-am-human/tree/master/contracts/registry#readme)
 3. [Elections smart contract](https://github.com/near-ndc/voting-v1/tree/master/elections)
 4. [IAH](https://i-am-human.gitbook.io/i-am-human-docs/)
-5. [Whistleblower program]()
+5. [Whistleblower program](https://medium.com/@neardigitalcollective/introducing-ndc-whistleblower-bounty-program-d4fe1b9fc5a0)
