@@ -18,7 +18,8 @@ Links:
 ## Important Dates
 
 - July 19, 15:00:00 UTC - September 7, 23:59:59 UTC — Nominations period. Candidacy submissions on [BOS Nominations Widget](https://near.org/nomination.ndctools.near/widget/NDC.Nomination.Page)
-- September 8, 00:00:00 UTC - September 22, 23:59:59 UTC — Congress Elections. BOS Widget WIP
+- September 8, 01:00:00 UTC - September 22, 23:59:59 UTC — Congress Elections. BOS Widget WIP
+- September 23, 00:00:00 UTC - September 30, 23:59:59 UTC — Cooldown and Tie Break sessions. Note, in case of tie break, the cooldown period will be extended.
 
 ## NDC V1 Governance Structure
 
