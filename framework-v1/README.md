@@ -94,7 +94,7 @@ On the candidates’ side, they all also agree to not buy votes for their electi
 
 Included in each and every vote, to prevent scripting.
 
-#### Safeguard 4. Ongoing monitoring and Machine Learning
+#### Safeguard 4. Ongoing monitoring
 
 Pikes Peak review Election results ongoing/after. NEAR is fortunate enough to have the data visualization and tracking capabilities of Pikespeak, active and involved in the ecosystem. As a core supporter of NDC, Pikes Peak is also going to be monitoring election results both during and after the election to identify any anomalies and ensure it is done as fairly as possible.
 
@@ -126,9 +126,15 @@ We would love to see every single person in the NEAR ecosystem vote in NDC elect
 
 No. [I-AM-HUMAN](https://i-am-human.app) does not store your biometrics. You are also free to request the deletion of any and all data collected in this process should you decide to forfeit your FV SBT.
 
-## Blacklist
+## Flagged Accounts
 
-A blacklist constitutes a roster of accounts contained within the `Registry` that have been flagged for restriction. Through the application of a ML algorithm or the deliberations of an IAH committee, an account can be added to the blacklist, leading to a suspension of its voting privileges and exclusion from receiving any SBTs. Should an account find itself on the blacklist, there exists a provision for filing an appeal with the committee. Upon approval of the appeal, the user's status will be lifted from the blacklist. For a comprehensive overview, please refer to the detailed I Am Human [Blacklist Specification](https://near-ndc.notion.site/IAH-Flag-Accounts-b5b9c2ff72d14328834e2a0effa22938).
+For the IAH registry we introduced a new feature: account flagging. It's a separate from SBT, because it can't be burned and doesn't have expiration time. Any authorized flagger can flag any account as _verified_ (aka whitelisted) or blacklisted.
+
+A verified account is an account that went through a manual verification and constitutes higher level of credibility. Initially it's related to the Community SBT ownership.
+
+A blacklist constitutes a roster of accounts contained within the `Registry` that have been flagged for restriction. Through the automated blockchain analysis or the deliberations of an IAH committee, an account can be added to the blacklist, leading to a suspension of its voting privileges and exclusion from receiving any SBTs. Should an account find itself on the blacklist, there exists a provision for filing an appeal with the committee. Upon approval of the appeal, the user's status will be lifted from the blacklist.
+
+For a comprehensive overview, please refer to the detailed I Am Human [Account Flagging Specification](https://near-ndc.notion.site/IAH-Flag-Accounts-b5b9c2ff72d14328834e2a0effa22938). In the future new models will be explored to asses accounts credibility and reputation.
 
 ## Post-Election
 

@@ -59,6 +59,7 @@ The Elections contract must have a final end time, which will be a max of `propo
 - Only matters if there is a tie at the very tail.
 - Options: a) extend number of seats, b) reduce number of seats, c) tie break session - elections only for people at tie.
   - Tie break session with reduced voting period (eg 2 days)
+  - Option c) is selected to execute Tie Braeks.
 
 In case of a Tie Break, the elections period will be extended and new proposals will be added by the Elections Commission to setup the tie break.
 
@@ -66,7 +67,7 @@ In case of a Tie Break, the elections period will be extended and new proposals 
 
 Any person with a Face Verified Soul Bound Token (SBT) is eligible to vote, and anyone can get one with a NEAR wallet through I-AM-HUMAN.
 
-TODO: other criteria that are discussed:
+Other criteria that are discussed:
 
 - staking
 - bonding
@@ -83,7 +84,7 @@ Bonding entails a mandatory deposit of NEAR tokens that each user must furnish p
 
 The Elections contract will act as an issuer for the IAH Registry.
 
-Once the elections are [over](#elections-end) anyone will be able to recover his bond and claim `I_Voted` SBT by calling `elections.unbond` method. The contract will return the bonded NEAR minus storage fees required to mint the `I Voted` SBT.
+Once the elections are [over](#elections-end) anyone will be able to recover his bond by calling `elections.unbond` method. Moreover, the method will mint `I_Voted` SBT if the voter voted for ALL proposals. The contract will return the bonded NEAR minus storage fees required to mint the `I Voted` SBT.
 
 ## Vote Revocation
 
