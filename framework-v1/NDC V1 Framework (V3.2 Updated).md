@@ -1,13 +1,11 @@
 # NDC V1 Framework (V3.2 Updated)
 
-Created time: July 10, 2023
-Moved from Notion to GitHub: Oct 20, 2023
-
 # **A Framework for the Governing Bodies of the NEAR Digital Collective**
 
 | Version: | Date: | Status: |
 | --- | --- | --- |
 | Governance Framework V3.2 | June 24th, 2023 | Publicly Visible to NDC |
+| Governance Framework V3.2 | Oct 20th, 2023 | Migrated from Notion to GitHub |
 
 There are four governing bodies of the NDC Governance Framework. Each governing body has specific roles and capabilities such that a system of checks and balances can develop. At a high level, these roles and capabilities are summarized as follows:
 
