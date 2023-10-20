@@ -18,7 +18,7 @@ The role and powers vested in these different governing bodies provide a robust 
 
 The balance of powers between these governing bodies can be understood in the following manner:
 
-### **CoA:**
+### CoA
 
 While the Council of Advisors sits in support of the HoM and maintains the ability to block a proposal or removal request, they are beholden to the HoM for the passage of proposals. Meanwhile, they are also beholden to the Transparency Commission insofar as they cannot remove members or investigate them.
 
