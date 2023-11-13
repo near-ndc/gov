@@ -8,33 +8,36 @@
 
 ## Summary
 
-There are four governing bodies of the NDC Governance Framework. Each governing body has specific roles and capabilities such that a system of checks and balances can develop. At a high level, these roles and capabilities are summarized as follows:
+There are four governing bodies of the NDC Governance Framework. Each governing body has specific roles and capabilities such that a system of checks and balances can develop. The role and powers vested in these different governing bodies provide a robust framework for ensuring governance of the Community Treasury in line with NEAR values and the ecosystem objectives.
+At a high level, the balance of powers between these governing bodies can be understood in the following manner:
 
-- **House of Merit (HoM)**: Propose and Allocate - 15 seats to start, adding 2 each congress until 31 is reached.
-- **Council of Advisors (CoA)**: Advise and Block - 7 seats set.
-- **Transparency Commission (TC)**: Investigate and Remove - 7 seats set.
-- **Voting Body (VB)**: all non-blacklisted human verified (using [I Am Human (**IAH**)](https://i-am-human.app/)) accounts. There are no requirements for being a member of the voting body beyond possession of 'I am Human' face verification SBT and not being in the [blacklist](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=Election_Integrity%E2%80%94Voter_Verification_Update&blockHeight=100436088&lastEditor=neardigitalcollective.near).
+### Voting Body
 
-The role and powers vested in these different governing bodies provide a robust framework for ensuring governance of the Community Treasury in line with NEAR values and the ecosystem objectives.
+All non-blacklisted human verified (using [I Am Human (**IAH**)](https://i-am-human.app/)) accounts. There are no requirements for being a member of the voting body beyond possession of 'I am Human' face verification SBT and not being in the [blacklist](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=Election_Integrity%E2%80%94Voter_Verification_Update&blockHeight=100436088&lastEditor=neardigitalcollective.near).
 
-The balance of powers between these governing bodies can be understood in the following manner:
+### Commission of Advisors
 
-### CoA
+Role: Advise and Block.
 
 While the Council of Advisors sits in support of the HoM and maintains the ability to block a proposal or removal request, they are beholden to the HoM for the passage of proposals. Meanwhile, they are also beholden to the Transparency Commission insofar as they cannot remove members or investigate them.
 
-### HoM
+### House of Merit
+
+Role: Propose and Allocate.
 
 While the HoM has the ability to propose legislation proactively, they are beholden to the Council of Advisors and ongoing checks if poor leadership is repeated over time. In the same vein, they are also accountable to the Transparency Commission in terms of ethics and transparency of their role.
 
-### TC
+### Transparency Commission
+
+Role: Investigate and Remove.
 
 While the Transparency Commission commands the sole power of hearing complaints, investigating members of both the HoM and the CoA, and to either extend an investigation, retain a member after investigation, or remove that member as a result of the investigation. CoA has the ability to allow someone who has been removed from their post to run for future sessions, only after they have been removed.
+
+### Responsibilities Summary
 
 All three institutions elect speakers at the beginning of each congress, and all institutions are required to meet weekly - with the HoM required to meet every 2 - 3 days.
 
 As this system evolves, each governing body has the ability to both support and limit the actions of the adjacent governing bodies. In this manner, while the system will evolve every election cycle with new members, the system itself will retain its functionality.
-
 
 ## Council of Advisors (CoA)
 
@@ -44,36 +47,43 @@ As this system evolves, each governing body has the ability to both support and 
 ⚠️ TL;DR: The Council of Advisors is responsible for advising, publicly prioritizing, and in cases of recurring issues, blocking actions of the two different governing bodies.
 
 The Council of Advisors operates on a _weekly time frame_ where their primary activities are to:
+
 1. Set Priorities for the HoM,
 2. Evaluate HoM , and
 3. Vote to Motion
-   1.  against a proposal,
+   1. against any HoM proposal,
    1. against an implemented proposal,
-   1.  overturn a TC ban and unban the member's eligibility to run in subsequent elections.
+   1. overturn a TC ban and unban the member's eligibility to run in subsequent elections.
 
 TC can dismiss any member from any house (including from TC itself), and moreover ban (`GovBan` I Am Human flag).
-
 CoA can unban a member (remove `GovBan`flag) at any time to run for future sessions (it will NOT bring him back to the office in the existing term).
+
 </aside>
 
 **Membership: 7** members.
+
 **Total Terms:** Max of 2 terms per individual.
+
 **Tenure per Term:** 6 months.
-**DAO Parameters:** `voting_duration = 5` , `cooldown = 0`
+
+**DAO Parameters:** `voting_duration = 5` , `cooldown = 7`
+
 **Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
+
 **Removal Criteria:** Complaint and investigation from filing to TC followed by a motion to remove.
+
 **Salaries**: (Based on contribution level)
 
-1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.*
+1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.\*
 2. _Hours vary based on representative availability, proposal volume, and process definition needs._
 
-## Council of Advisors (CoA) Powers
+### Council of Advisors (CoA) Powers
 
 | Members | Term     | Main Responsibilities                                                                     | Decision-Making                                            |
 | ------- | -------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 7       | 6 months | Manages ecosystem treasury, decides on large budget proposals, veto power over HoM and TC | Any CoA members can Veto; Hard majority of 4 votes to pass |
+| 7       | 6 months | ; Hard majority of 4 votes to pass |
 
-## Processes, Timelines & Key Stakeholders
+### Processes, Timelines & Key Stakeholders
 
 | Process                                          | Description                                                                                                                                                | Time Frame                            | Key Stakeholders   |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------ |
@@ -118,27 +128,27 @@ Voting Period:
    - If the CoA finds in favor of the appealing member, the following technical process is initiated:
      - A new OG SBT is minted for the member, reinstating their eligibility to run in subsequent elections.
 
-## **Operations Information:**
+### Operations Information
 
 The Council of Advisors operates on a weekly time frame. The essence of their job is to help the HoM set ecosystem priorities in parallel to evaluating HoM and TC performance for the month prior. In the event that there is a divergence in HoM operations and the vision of the CoA, they are able to motion to block a proposal or policy from the HoM. This motion to block can take place during and/or after a proposal or action has been taken by the HoM.
 
-### **Timeframe:** Weekly**.**
+**Timeframe: Weekly**.
 
-### **Vote Powers:**
+#### Vote Powers
 
 Any member of CoA can create a veto proposal to: (a) An active Proposal in the HoM, (b) An Implemented Policy (HoM operating params) (c) to unban a member banned by the TC to run in future elections, after the fact.
 
 Veto is only possible until the end of the cooldown period of the proposal to be vetoed.
 
-### **Approval Criteria:**
+#### Approval Criteria
 
 Vote to motion must pass once with 4 votes in favor.
 
-### **Rejection Criteria:**
+#### Rejection Criteria
 
 Vote to motion fails once with either 4 votes rejecting, or with vote timeout.
 
-### **Appeal Process:**
+###$ Appeal Process
 
 No appeal. Simply requires a re-submission of the vote to motion.
 
