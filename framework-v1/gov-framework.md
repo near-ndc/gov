@@ -481,25 +481,18 @@ In addition, the governing bodies can, at any time, based on the feedback of the
 
 ## References
 
-1. NDC Overview Slides
-   ([https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing))
-2. NDC Trust
-   ([https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/))
-3. NEAR Constitution
-   ([https://github.com/near-ndc/gov/blob/main/framework-v1/constitution.md](https://github.com/near-ndc/gov/blob/main/framework-v1/constitution.md))
-4. Code of Conduct
-   ([https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=CommunityGuidelines&blockHeight=91522833&lastEditor=neardigitalcollective.near](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=CommunityGuidelines&blockHeight=91522833&lastEditor=neardigitalcollective.near))
-5. Approved Setup Package
-   ([https://bafybeifjibo3ygatrlpszzhqososzw3rlitrgdudkrc6fceo3musandgfm.ipfs.nftstorage.link/](https://bafybeifjibo3ygatrlpszzhqososzw3rlitrgdudkrc6fceo3musandgfm.ipfs.nftstorage.link/))
-6. Declaration of Transparency and Accountability
-   ([https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/))
+1. [NDC Overview Slides](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing)
+2. [NDC Trust](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/)
+3. [NEAR Constitution](./constitution.md))
+4. [Code of Conduct](https://bafybeifjibo3ygatrlpszzhqososzw3rlitrgdudkrc6fceo3musandgfm.ipfs.nftstorage.link/)
+6. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
 7. [Fair Voting Policy](https://bafkreidwdxocdkfsv6srynw7ipnogfuw76fzncmxd5jv7furbsn5cp4bz4.ipfs.nftstorage.link/)
-8. [Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (not updated)
+8. [Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
 
 ### Tools:
 
-- Astra++ ([https://near.org/astraplusplus.ndctools.near/widget/home?page=congress](https://near.org/astraplusplus.ndctools.near/widget/home?page=congress)) - Congress, Voting Body, DAOs
-- NDC Docs ([https://near.org/neardigitalcollective.near/widget/NDCDocs](https://near.org/neardigitalcollective.near/widget/NDCDocs)) - post/edit final docs
-- Easy Poll ([https://near.org/easypoll-v0.ndc-widgets.near/widget/EasyPoll?page=official_polls](https://near.org/easypoll-v0.ndc-widgets.near/widget/EasyPoll?page=official_polls)) - Community pulse and sentiment
-- NDC Chatbot ([https://ndc-chatbot.nearhub.club/](https://ndc-chatbot.nearhub.club/)) - Ask questions
-- Kudos ([https://near.org/kudos.ndctools.near/widget/NDC.Kudos.Main](https://near.org/kudos.ndctools.near/widget/NDC.Kudos.Main)) - appreciation and recognition
+- [Astra++](https://near.org/astraplusplus.ndctools.near/widget/home?page=congress) - Congress, Voting Body, DAOs
+- [NDC Docs](https://near.org/neardigitalcollective.near/widget/NDCDocs) - post/edit final docs
+- [Easy Poll](https://near.org/easypoll-v0.ndc-widgets.near/widget/EasyPoll?page=official_polls) - Community pulse and sentiment
+- [NDC Chatbot](https://ndc-chatbot.nearhub.club/) - Ask questions
+- [Kudos](https://near.org/kudos.ndctools.near/widget/NDC.Kudos.Main) - appreciation and recognition
