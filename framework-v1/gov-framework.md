@@ -33,11 +33,25 @@ Role: Investigate and Remove.
 
 While the Transparency Commission commands the sole power of hearing complaints, investigating members of both the HoM and the CoA, and to either extend an investigation, retain a member after investigation, or remove that member as a result of the investigation. CoA has the ability to allow someone who has been removed from their post to run for future sessions, only after they have been removed.
 
-### Responsibilities Summary
+### Notes
 
 All three institutions elect speakers at the beginning of each congress, and all institutions are required to meet weekly - with the HoM required to meet every 2 - 3 days.
 
 As this system evolves, each governing body has the ability to both support and limit the actions of the adjacent governing bodies. In this manner, while the system will evolve every election cycle with new members, the system itself will retain its functionality.
+
+### House Voting Criteria
+
+HoM, CoA and TC share the same voting mechanism. When a proposal is active, any member can vote to approve, reject or abstain.
+
+**Approval Criteria**:
+Vote to motion must pass once with `approval_threshold` votes in favor.
+
+**Rejection Criteria**:
+Vote to motion fails once with either `active_members - approval_threshold + 1` rejecting or abstaining, or with vote timeout and not meeting approval criteria.
+
+**Tie Breaking**:
+No Tie is possible. If a member is removed prior to next election, then a hard majority of `approval_threshold` votes in favor must still be obtained, and grid-locked is taken as a rejected Motion.
+
 
 ## Council of Advisors (CoA)
 
@@ -60,11 +74,13 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 
 </aside>
 
-**Membership: 7** members.
+**Membership:** 7 members.
 
 **Total Terms:** Max of 2 terms per individual.
 
 **Tenure per Term:** 6 months.
+
+**Approval Threshold**: 4 members.
 
 **DAO Parameters:** `voting_duration = 5` , `cooldown = 7`
 
@@ -75,13 +91,7 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 **Salaries**: (Based on contribution level)
 
 1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.\*
-2. _Hours vary based on representative availability, proposal volume, and process definition needs._
-
-### Council of Advisors (CoA) Powers
-
-| Members | Term     | Main Responsibilities                                                                     | Decision-Making                                            |
-| ------- | -------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 7       | 6 months | ; Hard majority of 4 votes to pass |
+2. Hours vary based on representative availability, proposal volume, and process definition needs.
 
 ### Processes, Timelines & Key Stakeholders
 
@@ -93,40 +103,25 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 | Evaluate Performance of Governance Bodies        | Signal to the voting body the performance of both the House of Merit and the Transparency Commission, or to jolt either house to improve their performance | As needed                             | CoA, Voting Body   |
 | Unban members, banned by TC                      | Ability to re-instate banned members                                                                                                                       | As needed                             | CoA, Banned Member |
 
-### **Minimum Threshold of Engagement for CoA**
+### Minimum Threshold of Engagement for CoA
 
 | Activity            | Minimum Threshold | Frequency    | Implication of Failure | Notes                              |
 | ------------------- | ----------------- | ------------ | ---------------------- | ---------------------------------- |
 | Meeting Attendance  | 60%               | Per Month    | Subject to Removal     | Required to maintain active status |
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 
-### **Voting Powers:**
+### Proposals and Voting
 
-1. Vote against a proposal.
-2. Vote against an implemented proposal.
-3. Vote to appeal and overturn a TC ban and unban the member's eligibility to run in subsequent elections.
+At least 4 vote approvals are required to pass a proposal. This structure ensures that the Council of Advisors serves primarily as a safeguard against ill-advised decisions, rather than as an active governing body in the governance and implementation of proposals.
 
-Voting to enact any of the listed actions requires a single vote, with at least 4 votes approval. This structure ensures that the Council of Advisors serves primarily as a safeguard against ill-advised decisions, rather than as an active governing body in the governance and implementation of proposals.
-
-Voting Period:
-
-- Vote against a proposal:
-  - Can be proposed and passed starting from the time that a Motion has been proposed in HoM.
-  - Voting period to veto in CoA continues to run a further 7 days after the timestamp at which the corresponding Motion was approved and passed in the HoM.
+- Veto a HoM proposal:
+  - veto must be approved by CoA before the HoM proposal cooldown finishes.
 - Vote against an implemented proposal and vote to appeal and overturn a TC ban and unban the member's eligibility to run in subsequent elections.
-
   - Can be proposed at any time.
-  - Voting period is 7 days from the time the Motion was created.
-
-  **Removal and Banning Process for Members of the Governing Body**:
-
-1. **Initial Removal and Ban by TC**:
-   - If the TC removes a member from office, that member is ineligible to serve for the remainder of that term. However, they may run in future elections.
-   - If the TC decides to ban a member from running in future elections, the member's OG SBT is burnt, rendering them ineligible for future candidacy.
-2. **Appeal Process to the CoA**:
-   - Banned members have the right to appeal their ban to the CoA.
-   - If the CoA finds in favor of the appealing member, the following technical process is initiated:
-     - A new OG SBT is minted for the member, reinstating their eligibility to run in subsequent elections.
+- Overturn a TC ban. TC can remove a member from the office - that member is ineligible to serve for the remainder of that term. However, they may run in future elections. Additionally, TC can decide to ban a member from running in future elections, the member's OG SBT is burnt and the members is flagged with `GovBan` flag, rendering them ineligible for future candidacy.
+  **Appeal Process to the CoA**:
+  - Banned members have the right to appeal their ban to the CoA.
+  - If the CoA finds in favor of the appealing member, the following technical process is initiated: a new OG SBT is minted for the member and `GovBan` flag is removed, reinstating their eligibility to run in subsequent elections.
 
 ### Operations Information
 
@@ -134,39 +129,17 @@ The Council of Advisors operates on a weekly time frame. The essence of their jo
 
 **Timeframe: Weekly**.
 
-#### Vote Powers
-
-Any member of CoA can create a veto proposal to: (a) An active Proposal in the HoM, (b) An Implemented Policy (HoM operating params) (c) to unban a member banned by the TC to run in future elections, after the fact.
-
-Veto is only possible until the end of the cooldown period of the proposal to be vetoed.
-
-#### Approval Criteria
-
-Vote to motion must pass once with 4 votes in favor.
-
-#### Rejection Criteria
-
-Vote to motion fails once with either 4 votes rejecting, or with vote timeout.
-
-###$ Appeal Process
+#### Appeal Process
 
 No appeal. Simply requires a re-submission of the vote to motion.
 
-## **Ongoing Activities:**
+### Ongoing Activities
 
 - Release Priorities for the Ecosystem for HoM.
 - Release Evaluation of Activities from HoM and TC.
 - Motion to block or overturn ongoing or existing decisions or policies.
 
-### **Quorums:**
-
-Voting on motions in the CoA passes with a hard majority of 4 votes in favor.
-
-### **Tie Breaking:**
-
-No Tie is possible. If a member is removed prior to next election, then a hard majority of 4 votes in favor must still be obtained, and grid-locked is taken as a rejected Motion.
-
-## **Election Procedures:**
+### Election Procedures
 
 - _Election Eligibility Requirements:_ OG SBT.
 - _Eligibility and Announcement:_ During the nomination period.
@@ -174,7 +147,6 @@ No Tie is possible. If a member is removed prior to next election, then a hard m
 - _Onboarding Process:_ 1 week post-election
 - _Conflicts of Interest:_ Community members looking to assume positions should disclose all their relevant affiliations, as well as any other potential conflicts of interest.
 
----
 
 # **House of Merit (HoM)**
 
