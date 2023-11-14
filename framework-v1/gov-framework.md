@@ -395,21 +395,21 @@ However, until that member is either removed or retained, they may vote on any o
 
 ### Processes, Timelines & Key Stakeholders
 
-| Process                                                          | Description                                                              | Votes required             | Time Frame            |     |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------- | --------------------- | --- |
-| Election                                                         | Vote for members to serve in each institution                            |                            | 1 week every 6 months |     |
-| Dissolve Institutions                                            | Vote to dissolve any of the institutions                                 | Near Supermajority Consent | As needed             |     |
-| Amend the Gov Framework                                          | vote to amend the constitution or an element of the governance framework | Near Supermajority Consent | As needed             |     |
-| Veto Large Budget Items                                          | Vote to veto budget items over a certain threshold                       | Near Consent               | As needed             |     |
-| Veto Recurring Budget Items                                      | Vote to veto any recurring budget items                                  | Near Consent               | As needed             |     |
-| Community Treasury - Swapping NEAR Consent                       | Vote to swap NEAR Consent for NEAR Supermajority Consent                 | Near Supermajority Consent | As needed             |     |
-| Community Treasury - Supermajority Consent & Quorum requirements | Vote to changes to NEAR Supermajority Consent & Quorum requirements      | Near Supermajority Consent | As needed             |     |
-| Community Treasury - Overriding powers                           | Vote to Overriding powers                                                | Near Consent               | As needed             |     |
-| Community Treasury - Addition & Exclusion of trustees            | Vote to Addition & Exclusion of trustees                                 | Near Consent               | As needed             |     |
-| Community Treasury - Amend trust instrument                      | Vote to Amend trust instrument                                           | Near Consent               | As needed             |     |
-| Community Treasury - Make distributions                          | Vote to Make distributions                                               | Near Consent               | As needed             |     |
-| Ratify Setup package                                             | Vote to ratify Setup package                                             | Near Consent               | As needed             |     |
-|                                                                  |                                                                          |                            |                       |     |
+| Process                                                          | Description                                                              | Votes required             | Time Frame            |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------- | --------------------- |
+| Election                                                         | Vote for members to serve in each institution                            |                            | 1 week every 6 months |
+| Dissolve Institutions                                            | Vote to dissolve any of the institutions                                 | Near Supermajority Consent | As needed             |
+| Amend the Gov Framework                                          | vote to amend the constitution or an element of the governance framework | Near Supermajority Consent | As needed             |
+| Veto Large Budget Items                                          | Vote to veto budget items over a certain threshold                       | Near Consent               | As needed             |
+| Veto Recurring Budget Items                                      | Vote to veto any recurring budget items                                  | Near Consent               | As needed             |
+| Community Treasury - Swapping NEAR Consent                       | Vote to swap NEAR Consent for NEAR Supermajority Consent                 | Near Supermajority Consent | As needed             |
+| Community Treasury - Supermajority Consent & Quorum requirements | Vote to changes to NEAR Supermajority Consent & Quorum requirements      | Near Supermajority Consent | As needed             |
+| Community Treasury - Overriding powers                           | Vote to Overriding powers                                                | Near Consent               | As needed             |
+| Community Treasury - Addition & Exclusion of trustees            | Vote to Addition & Exclusion of trustees                                 | Near Consent               | As needed             |
+| Community Treasury - Amend trust instrument                      | Vote to Amend trust instrument                                           | Near Consent               | As needed             |
+| Community Treasury - Make distributions                          | Vote to Make distributions                                               | Near Consent               | As needed             |
+| Ratify Setup package                                             | Vote to ratify Setup package                                             | Near Consent               | As needed             |
+| Approve Budget                                                   | Vote to approve budget proposed by HoM                                   | Near Consent               | As needed             |
 
 ### Double Clicking On Dissolving a Governance Body:
 
@@ -485,9 +485,9 @@ In addition, the governing bodies can, at any time, based on the feedback of the
 2. [NDC Trust](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/)
 3. [NEAR Constitution](./constitution.md))
 4. [Code of Conduct](https://bafybeifjibo3ygatrlpszzhqososzw3rlitrgdudkrc6fceo3musandgfm.ipfs.nftstorage.link/)
-6. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
-7. [Fair Voting Policy](https://bafkreidwdxocdkfsv6srynw7ipnogfuw76fzncmxd5jv7furbsn5cp4bz4.ipfs.nftstorage.link/)
-8. [Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
+5. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
+6. [Fair Voting Policy](https://bafkreidwdxocdkfsv6srynw7ipnogfuw76fzncmxd5jv7furbsn5cp4bz4.ipfs.nftstorage.link/)
+7. [Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
 
 ### Tools:
 
