@@ -220,6 +220,7 @@ HoM can’t change the following params:
 - session budget: max budget they can operate.
 
 HoM can change the following params:
+
 - `hom.big_budget_size = 75k USD` (initial one). It is set by the HoM and it is for them to define what items of size they would like to set as thresholds for VB checks,
 
 The initial parameters are defined by the _Initial Setup Package_, which is voted by the Voting Body during Elections.
@@ -268,9 +269,8 @@ This **Setup Package** sets the precedent for how the new **Congress** will oper
 Proposal lifetime: created → HoM voting → cooldown.
 
 A **[Setup Package](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d4703af1fee4a89c61da1?pvs=21)** can be proposed by any member in either the HoM or CoA, and must then pass a simple majority by the **Voting Body** in a general election, before being implemented (1 week implementation time). A minimum of 1 **Setup Package** must be proposed prior to a general election.
-- All other items must receive 8 votes in favor within a week in order to be implemented - and remain eligible to veto by the CoA either during the HoM voting period or during the subsequent 7 days after HoM approval (regardless of being big budget, recurring or solo).
 
-### **Approval Criteria:**
+All other items must receive 8 votes in favor within a week in order to be implemented - and remain eligible to veto by the CoA either during the HoM voting period or during the subsequent 7 days after HoM approval (regardless of being big budget, recurring or solo).
 
 **Setup Package**:
 
@@ -278,7 +278,7 @@ A **[Setup Package](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d470
 - If more than one **Setup Package** has been proposed then voters in the **Voting Body** will be given one vote each and can cast it either in favor of the **Setup Package** that they prefer, or can abstain. The **Setup Package** with the most votes in favor wins.
 - General elections are subject to an 8% quorum requirement, inclusive of any “abstain” votes cast.
 
-.**Funding Proposals:**
+**Funding Proposals:**
 
 - Each **Funding Proposal** must first fit within the confines of the parameters defined in the **Setup Package** before it can be created. The Smart Contract will validate and enforce these rules and will not allow creation of a **Funding Proposal** that violates the **Setup Package**.
 - Recurring **Funding Proposals,** and one-off **Funding Proposals** above the big budget threshold value, require 8 votes in favor in the HoM, and then a subsequent 4 votes in favor in the CoA.
@@ -300,9 +300,9 @@ Re-proposal the following week
 
 After the first congress, 2 new members are added to the House of Merit each Congress, until there are 31 members total. The threshold to pass a vote is simultaneously increased by one, until the threshold reaches 16.
 
-# **Transparency Commission (TC)**
+## Transparency Commission (TC)
 
-## **Processes & Procedure = Investigate and Remove**
+> **Processes & Procedure = Investigate and Remove**
 
 <aside>
 ⚠️ Tldr:The Transparency Commission (TC) is responsible for maintaining proper procedure and governance of the NDC for the benefit of the ecosystem. This applies on four levels: (1) For initiate and (or) the removal of any poor actors violating codes of conduct or acting out of self-interest, (2) For the removal of any member from a complaint of incompetence, (3) For qualifying candidates looking to run for a seat in any of the governing bodies. (4) Guaranteeing transparency of operations and intentions with the community, including oversight of fund distribution and evaluation of integrity of stakeholders. During the congressional term, the Transparency Commission is in charge of listening to, selecting complaints, and investigating them, from which only the TC can decide to either extend (the investigation), remove the member, or retain the member. Notably, the members of the TC themselves cannot file a complaint - they are tasked with investigating the complaints from the ecosystem after carefully evaluating their merit and legitimacy.
@@ -315,24 +315,24 @@ After the first congress, 2 new members are added to the House of Merit each Con
 
 **Tenure per Term:** 6 months.
 
-**DAO Parameters:** `voting_duration = 5` , `cooldown = 0`
+**DAO Parameters:** `approval_threshold = 4, voting_duration = 5` , `cooldown = 0`
 
-**Appointment Eligibility Criteria:** Satisfying **[](https://www.notion.so/NDC-V1-Safeguards-OB-SBT-e32ec3a61458478c96b3d7acf6646a61?pvs=21)**[OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
+**Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
 **Removal Criteria:** Complaint and investigation from filing to TC followed by a motion to remove.
 
 **Salaries**: (Based on contribution level)
 
-1. S*peakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.*
-2. _Hours vary based on representative availability, proposal volume, and process definition needs._
+1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.
+2. Hours vary based on representative availability, proposal volume, and process definition needs.
 
-## **Transparency Commission (TC) Powers**
+### Processes, Timelines & Key Stakeholders
 
-| Members | Term     | Main Responsibilities                                                                                     | Decision-Making                                                                           |
-| ------- | -------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 7       | 6 months | Maintains governance, initiates investigations and removals of members, qualifies candidates for election | Simple majority (4/7) for investigations and decisions on removal or retention of members |
+The transparency commission meets to evaluate complaints, issue public opinions on such complaints, or issue notice of investigation. Every investigation may last as much as needed. Both the HoM and the CoA respect the final verdict of the TC; however, the CoA does possess the ability to clear or reinstate (to run once again) a dismissed individual.
 
-## **Processes, Timelines & Key Stakeholders**
+As a matter of operations, the TC must investigate complaints against themselves.
+
+Timeframe: To go over complaints and initiative investigations. Investigations limit = no limits.
 
 | Process               | Description                                                                                            | Time Frame                                     | Key Stakeholders               |
 | --------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------- | ------------------------------ |
@@ -341,26 +341,14 @@ After the first congress, 2 new members are added to the House of Merit each Con
 | Motion to Ban         | Removes a member from the post, and bans that member from serving in ANY Governance post in the future | As needed                                      | TC, Member being banned        |
 |                       |                                                                                                        |                                                |                                |
 
-### **Minimum Threshold of Engagement for TC**
+### Minimum Threshold of Engagement for TC
 
 | Activity            | Minimum Threshold | Frequency    | Implication of Failure | Notes                              |
 | ------------------- | ----------------- | ------------ | ---------------------- | ---------------------------------- |
 | Meeting Attendance  | 60%               | Per Month    | Subject to Removal     | Required to maintain active status |
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 
-## **Operations Information:**
-
-The transparency commission meets to evaluate complaints, issue public opinions on such complaints, or issue notice of investigation. Every investigation may last as much as needed. Both the HoM and the CoA respect the final verdict of the TC; however, the CoA does possess the ability to clear or reinstate (to run once again) a dismissed individual.
-
-## **On Self-Regulation of the TC:**
-
-As a matter of operations, the TC must investigate complaints against themselves.
-
-### **Timeline**:
-
-To go over complaints and initiative investigations. Investigations limit = no limits.
-
-### **Vote Powers**:
+### Proposals and Voting
 
 Members of the TC receive complaints and requests for investigation. Once a request is successfully considered, TC can make one of the following on chain proposals:
 
@@ -369,23 +357,11 @@ Members of the TC receive complaints and requests for investigation. Once a requ
   - This is done manually by removing OG.
 - **Motion to Retain**: A proposal to keep the member in their current role and end the investigation without further action
 
-### **Appeal Process:**
+#### Appeal Process
 
 The only appeal (for motion to remove and ban) process can be done through the CoA for a motion to Remove and Ban after two months and a strong majority vote or within the TC itself, pending another investigation.
 
-### **Approved Threshold:**
-
-Simple Majority (4/7)
-
-### **Proposal Requirement:**
-
-1 member is sufficient to put forward a motion to vote on.
-
-### **Tie Breaking:**
-
-No tie possible with 7 members.
-
-## Investigation on a member of the TC:
+### Investigation on a member of the TC
 
 In the event a member of the TC is under investigation, they are ineligible to vote on the motion to investigate them or any subsequent motion related to it. Specifically, they cannot participate in votes that concern their own status. The TC defines the scope of votes that can concern a member. The complete list of proposals that can concern a member includes:
 
