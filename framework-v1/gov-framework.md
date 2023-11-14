@@ -52,7 +52,6 @@ Vote to motion fails once with either `active_members - approval_threshold + 1` 
 **Tie Breaking**:
 No Tie is possible. If a member is removed prior to next election, then a hard majority of `approval_threshold` votes in favor must still be obtained, and grid-locked is taken as a rejected Motion.
 
-
 ## Council of Advisors (CoA)
 
 > **Processes & Procedure = Supportive, Defensive**
@@ -138,15 +137,6 @@ No appeal. Simply requires a re-submission of the vote to motion.
 - Release Priorities for the Ecosystem for HoM.
 - Release Evaluation of Activities from HoM and TC.
 - Motion to block or overturn ongoing or existing decisions or policies.
-
-### Election Procedures
-
-- _Election Eligibility Requirements:_ OG SBT.
-- _Eligibility and Announcement:_ During the nomination period.
-- _Election Timeframe:_ 2 weeks.
-- _Onboarding Process:_ 1 week post-election
-- _Conflicts of Interest:_ Community members looking to assume positions should disclose all their relevant affiliations, as well as any other potential conflicts of interest.
-
 
 # **House of Merit (HoM)**
 
@@ -335,16 +325,6 @@ No Tie is possible. If a member is removed prior to next election, then a simple
 
 After the first congress, 2 new members are added to the House of Merit each Congress, until there are 31 members total. The threshold to pass a vote is simultaneously increased by one, until the threshold reaches 16.
 
-## **Election Procedures:**
-
-- _Election Eligibility Requirements:_ OG SBT.
-- _Eligibility and Announcement:_ During the nomination period.
-- _Election Timeframe:_ 2 weeks.
-- _Onboarding Process:_ 1 week post-election
-- _Conflicts of Interest:_ Community members looking to assume positions should disclose all their relevant affiliations, as well as any other potential conflicts of interest.
-
----
-
 # **Transparency Commission (TC)**
 
 ## **Processes & Procedure = Investigate and Remove**
@@ -439,14 +419,6 @@ In the event a member of the TC is under investigation, they are ineligible to v
 
 However, until that member is either removed or retained, they may vote on any other issue. In the event of resignation prior to re-election, any grid-locked decision is taken as a rejection of the proposal.
 
-## **Election Procedures:**
-
-- _Election Eligibility Requirements:_ OG SBT.
-- _Eligibility and Announcement:_ During the nomination period.
-- _Election Timeframe:_ 2 weeks.
-- _Onboarding Process:_ 1 week post-election
-- _Conflicts of Interest:_ Community members looking to assume positions should disclose all their relevant affiliations, as well as any other potential conflicts of interest.
-
 # **The Voting Body**
 
 ## **Composition and Eligibility**:
@@ -521,6 +493,12 @@ The voting body retains a significant influence over the NDC, ensuring its abili
 # **The Election Procedure:**
 
 The election procedure establishes the precedent for how elections are conducted for all three governing bodies. It also pertains to the expansion of the governing bodies and alterations to the Gov Framework over time.
+
+- _Election Eligibility Requirements:_ OG SBT.
+- _Eligibility and Announcement:_ During the nomination period.
+- _Election Timeframe:_ 2 weeks.
+- _Onboarding Process:_ 1 week post-election
+- _Conflicts of Interest:_ Community members looking to assume positions should disclose all their relevant affiliations, as well as any other potential conflicts of interest.
 
 The ‘Election procedure’ can be divided into three separate sections:
 
