@@ -47,7 +47,7 @@ HoM, CoA and TC share the same voting mechanism. When a proposal is active, any 
 Vote to motion must pass once with `approval_threshold` votes in favor.
 
 **Rejection Criteria**:
-Vote to motion fails once with either `active_members - approval_threshold + 1` rejecting or abstaining, or with vote timeout and not meeting approval criteria.
+Not a receiving `approval_threshold` votes in favor nor veto from CoA (where relevant).
 
 **Tie Breaking**:
 No Tie is possible. If a member is removed prior to next election, then a hard majority of `approval_threshold` votes in favor must still be obtained, and grid-locked is taken as a rejected Motion.
@@ -79,9 +79,7 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 
 **Tenure per Term:** 6 months.
 
-**Approval Threshold**: 4 members.
-
-**DAO Parameters:** `voting_duration = 5` , `cooldown = 7`
+**DAO Parameters:** `approval_threshold = 4, voting_duration = 5` , `cooldown = 7`
 
 **Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
@@ -89,7 +87,7 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 
 **Salaries**: (Based on contribution level)
 
-1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.\*
+1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.
 2. Hours vary based on representative availability, proposal volume, and process definition needs.
 
 ### Processes, Timelines & Key Stakeholders
@@ -138,12 +136,12 @@ No appeal. Simply requires a re-submission of the vote to motion.
 - Release Evaluation of Activities from HoM and TC.
 - Motion to block or overturn ongoing or existing decisions or policies.
 
-# **House of Merit (HoM)**
+## House of Merit (HoM)
 
 > **Processes & Procedure = Active, Directive**
 
 <aside>
-⚠️ *Tl/Dr: T*he House of Merit is responsible for proposing, passing, and allocating **Funding Proposals** from the NEAR Treasury within an agreed-upon Budget Package agreed with the CoA, to hire or create new roles for the NDC itself, and to alter any protocol governed mechanics or public goods. The HoM is the primary engine of policy implementation and budget allocation for the governance of the NEAR Ecosystem. The HoM operates on a *weekly* timeframe, whereby a proposal (requiring at minimum two sponsors) is voted on. In order for a proposal to be implemented it requires a hard majority of 8 votes in the HoM and for the not being vetoed.
+⚠️ *Tl/Dr: T*he House of Merit is responsible for proposing, passing, and allocating **Funding Proposals** from the NEAR Treasury within an agreed-upon Budget Package agreed with the CoA, to hire or create new roles for the NDC itself, and to alter any protocol governed mechanics or public goods. The HoM is the primary engine of policy implementation and budget allocation for the governance of the NEAR Ecosystem. The HoM operates on a *weekly* timeframe, whereby a proposal is voted on. In order for a proposal to be implemented it requires a hard majority of 8 votes in the HoM and for the not being vetoed.
 
 </aside>
 
@@ -153,24 +151,18 @@ No appeal. Simply requires a re-submission of the vote to motion.
 
 **Tenure per Term:** 6 months.
 
-**DAO Parameters:** `voting_duration = 5` , `cooldown = 7 days` . Cooldown allows CoA and VB to veto a proposal during the proposal voting and after 7 days after a proposal passed. The proposal can’t be executed after the cooldown is over.
+**DAO Parameters:** `approval_threshold = 8, voting_duration = 5` , `cooldown = 7 days` . Cooldown allows CoA and VB to veto a proposal during the proposal voting and after 7 days after a proposal passed. The proposal can’t be executed after the cooldown is over.
 
-**Appointment Eligibility Criteria:** Satisfying **[](https://www.notion.so/NDC-V1-Safeguards-OB-SBT-e32ec3a61458478c96b3d7acf6646a61?pvs=21)**[OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
+**Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
 **Removal Criteria:** Complaint and investigation from filing to TC followed by a motion to remove.
 
 **Salaries**: (Based on contribution level)
 
-1. S*peakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.*
-2. _Hours vary based on representative availability, proposal volume, and process definition needs._
+1. Speakers and core contributors to each house will generally contribute more hours; some part-time and full-time resources may be required.
+2. Hours vary based on representative availability, proposal volume, and process definition needs.
 
-## **House of Merit (HoM) Powers**
-
-| Members | Term     | Main Responsibilities                                                                                                      | Decision-Making                                                         |
-| ------- | -------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 15      | 6 months | Proposes and votes on operational matters, including budget allocation, long-term strategy, hiring, and mechanical changes | Any HoM members to sponsor a proposal; Hard majority of 8 votes to pass |
-
-## **Processes, Timelines & Key Stakeholders**
+### Processes, Timelines & Key Stakeholders
 
 | Process                                     | Description                                                                          | Time Frame                                                       | Key Stakeholders |
 | ------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------- |
@@ -180,7 +172,7 @@ No appeal. Simply requires a re-submission of the vote to motion.
 | Proposal for Official Long Term Strategy    | Votes on the priorities and strategies of the Congress                               | Date is set by Proposer and vote is open for 5 days per proposal | HoM              |
 | Proposal to Hire                            | Creates and funds a position in the NEAR Ecosystem for a specific role               | Date is set by Proposer and vote is open for 5 days per proposal | HoM              |
 
-## \***\*Minimum Threshold of Engagement for HoM\*\***
+### Minimum Threshold of Engagement for HoM
 
 | Activity            | Minimum Threshold | Frequency    | Implication of Failure | Notes                              |
 | ------------------- | ----------------- | ------------ | ---------------------- | ---------------------------------- |
@@ -188,9 +180,7 @@ No appeal. Simply requires a re-submission of the vote to motion.
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 | Proposal Creation   | 2                 | Per Term     | Subject to Removal     | Required to maintain active status |
 
-## Budget **Package - 1st Order of Business:**
-
-## Template : **Budget Package**
+### Budget **Package - 1st Order of Business:**
 
 | Line Item Code | Main Category                                                   | Subcategory Code | Subcategory             | Purpose                                | Rationale                              | Budget Allocation |
 | -------------- | --------------------------------------------------------------- | ---------------- | ----------------------- | -------------------------------------- | -------------------------------------- | ----------------- |
@@ -222,48 +212,39 @@ The HoM must also elect a Speaker at the beginning of each Congress. The Speaker
 
 </aside>
 
-HoM params, that can’t change the following params:
+HoM can’t change the following params:
 
 - Cap Budget Item: maximum value of the single proposal.
-- term limit → DAO must have “end time”
-- recurring budget item max size = 6months
+- term limit → DAO must have “end time”.
+- recurring budget item max size = 6 months. It's an item that is processed sequentially on the interval by the trust (renews automatically without another vote by the HoM or check by CoA). Vetoing it doesn’t have additional tech callback - it’s processed by trustees.
 - session budget: max budget they can operate.
 
 HoM can change the following params:
+- `hom.big_budget_size = 75k USD` (initial one). It is set by the HoM and it is for them to define what items of size they would like to set as thresholds for VB checks,
 
-- Big budget item = It is set by the HoM and it is for them to define what items of size they would like to set as thresholds for VB checks
-  - HoM is a DAO and it can create proposals.
-  - Proposal lifetime: created → HoM voting → cooldown.
-  - Proposal can be vetoed by CoA or VB (latter only for big budget items).
-  - The initial parameters are defined by the _Initial Setup Package_, which is voted by the Voting Body during Elections.
-  - `hom.big_budget_size = 75k USD` (initial one).
-- Recurring budget item = an item that is processed sequentially on the interval by the trust (renews automatically without another vote by the HoM or check by CoA). Vetoing it doesn’t have additional tech callback - it’s processed by trustees.
+The initial parameters are defined by the _Initial Setup Package_, which is voted by the Voting Body during Elections.
 
-## Operation Information:
+### Operation Information
 
 The HoM is required to meet every 2 to 3 weekdays at minimum. This allows the HoM to move quickly and iterate efficiently. Any HoM member can make a proposal and put it into motion. 8 votes in favor is required to pass. The voting period for all votes last for 5 days once they are proposed (the proposal creator decides when they are proposed).
 
-**Timeframe**:
+Timeframe:
 
 - Meetings at least every 2 to 3 weekdays
 - Voting is on-going and asynchronous.
 
-**Vote Powers:**
+#### Vote Powers
 
-- Funding Proposal
+- Funding Proposal. Must specify Amount, Token and Target Account (similar to Transfer Proposals, but without executing the transfer immediately)
 - Proposal for budget allocation (see **Budget Package** above)
 - Proposal for long-term strategy / Focus.
 - Proposal to Hire.
 - Proposal to change mechanics.
 
-**Voting Mechanics:**
+CoA has veto power over all active proposals or recurrent.
+Voting results are not valid until the cooldown period has passed without any veto enacted.
 
-- All vote types are simple text based proposals, except Funding Proposals
-- Funding Proposals also specify Amount, Token and Target Account (similar to Transfer Proposals, but without executing the transfer immediately)
-- All votes require 8 votes in favor from members of the HoM to pass the HoM.
-- CoA then has veto power over all votes. Voting results are not valid until the veto period has passed without any veto enacted.
-
-## **Setup Package - Last Order of Business:**
+### Setup Package - Last Order of Business
 
 <aside>
 ⚠️ this is not implemented and will require approval from HoM to implement it.
@@ -282,16 +263,18 @@ At the end of every **Congress**, the last order of business is for the HoM to c
 
 This **Setup Package** sets the precedent for how the new **Congress** will operate. Only after the **Voting Body** has passed the **Setup Package** does the HoM commence operations.
 
-## **Voting Process:**
+### Proposals and Voting
 
-- A **[Setup Package](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d4703af1fee4a89c61da1?pvs=21)** can be proposed by any member in either the HoM or CoA, and must then pass a simple majority by the **Voting Body** in a general election, before being implemented (1 week implementation time). A minimum of 1 **Setup Package** must be proposed prior to a general election.
+Proposal lifetime: created → HoM voting → cooldown.
+
+A **[Setup Package](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d4703af1fee4a89c61da1?pvs=21)** can be proposed by any member in either the HoM or CoA, and must then pass a simple majority by the **Voting Body** in a general election, before being implemented (1 week implementation time). A minimum of 1 **Setup Package** must be proposed prior to a general election.
 - All other items must receive 8 votes in favor within a week in order to be implemented - and remain eligible to veto by the CoA either during the HoM voting period or during the subsequent 7 days after HoM approval (regardless of being big budget, recurring or solo).
 
 ### **Approval Criteria:**
 
-**Setup Package** **proposals**:
+**Setup Package**:
 
-- If one **Setup Package** has been proposed, then it will be a yes/no/abstain vote which must pass a simple majority, i.e. more votes in favor than votes against, by the **Voting Body** in a general election.
+- If one **Setup Package** has been proposed, then it will be a approve or reject or abstain vote which must pass with a simple majority, i.e. more votes in favor than votes against, by the **Voting Body** in a general election.
 - If more than one **Setup Package** has been proposed then voters in the **Voting Body** will be given one vote each and can cast it either in favor of the **Setup Package** that they prefer, or can abstain. The **Setup Package** with the most votes in favor wins.
 - General elections are subject to an 8% quorum requirement, inclusive of any “abstain” votes cast.
 
@@ -309,19 +292,11 @@ This **Setup Package** sets the precedent for how the new **Congress** will oper
 
 - Require 8 votes in favor in the HoM and the absence of a CoA veto.
 
-### **Rejection Criteria**:
-
-Not a simple majority or veto from CoA (where relevant).
-
-### **Appeal Process**:
+### Appeal Process
 
 Re-proposal the following week
 
-### **Tie Breaking:**
-
-No Tie is possible. If a member is removed prior to next election, then a simple majority must still be obtained, and grid-locked is taken as a rejected proposal.
-
-### **Growth:**
+### Growth
 
 After the first congress, 2 new members are added to the House of Merit each Congress, until there are 31 members total. The threshold to pass a vote is simultaneously increased by one, until the threshold reaches 16.
 
