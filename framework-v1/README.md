@@ -7,7 +7,12 @@ After laying this decentralization groundwork, the NDC is gearing up for its fir
 Links:
 
 - [Constitution](./constitution.md)
-- [V1 Governance Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
+- [Personhood Voting](./personhood-voting.md)
+- V1 Governance
+
+  - [V1 Governance Framework](./gov-framework.md)
+  - [Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
+
 - [Elections](#Elections)
   - [voting details](./elections-voting.md)
 - [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0)
@@ -147,5 +152,5 @@ After the election results are announced, the elected representatives will conve
 1. [fair-voting-policy](https://bafkreiapsavs6hrc6aomzagub7aumogkfbjewlo2tvwzesr4myshlecfqy.ipfs.nftstorage.link)
 2. [Registry docs](https://github.com/near-ndc/i-am-human/tree/master/contracts/registry#readme)
 3. [Elections smart contract](https://github.com/near-ndc/voting-v1/tree/master/elections)
-4. [IAH](https://i-am-human.gitbook.io/i-am-human-docs/)
+4. [I Am Human (IAH)](https://i-am-human.gitbook.io/i-am-human-docs/)
 5. [Whistleblower program](https://medium.com/@neardigitalcollective/introducing-ndc-whistleblower-bounty-program-d4fe1b9fc5a0)
