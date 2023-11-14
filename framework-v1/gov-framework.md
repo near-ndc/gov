@@ -430,8 +430,7 @@ The changes are then implemented in the next Congress.
 
 The voting body retains a significant influence over the NDC, ensuring its ability to overturn or shape its performance.
 
-
-# **The Election Procedure:**
+## The Election Procedure
 
 The election procedure establishes the precedent for how elections are conducted for all three governing bodies. It also pertains to the expansion of the governing bodies and alterations to the Gov Framework over time.
 
@@ -447,7 +446,7 @@ The ‘Election procedure’ can be divided into three separate sections:
 - _The Election Timer:_ When elections are conducted, the timeframes for voting, and the start of a new congress.
 - _System Iteration Over Time:_ How these mechanics are able to be changed within the governance framework.
 
-## **The Candidate Process:**
+### The Candidate Process
 
 To participate in any of the three governing bodies, a candidate must adhere to the following process:
 
@@ -460,7 +459,7 @@ At the conclusion of the election, the winners are decided based upon majority v
 
 1 week after the end of the election, the new candidates onboard to the governance platform and assume responsibilities based upon the seats they have been elected to.
 
-## **The Election Timer:**
+### The Election Timer
 
 The election timer refers to the timeframe for governance congresses and election cycles. Every election and every seat abides by the same election timer.
 
@@ -472,7 +471,7 @@ At the close of the election period, a one-week window onboards the new congress
 
 At the end of T-Week the ‘Setup package’ is submitted, and the Congress officially begins. In the event that the Voting Body does not approve the ‘setup package,’ the new congress must submit another setup package for review before any other legislation can be passed or considered.
 
-## **System Iteration Over Time:**
+### System Iteration Over Time
 
 Every new congress has the ability to alter the fundamental mechanics of the governing bodies in the passage of a new setup package. This means that any expansion to a governing, timer or term changes, or procedural change is done at the start of the new congress and implemented for the next election cycle - assuming approval by the CoA.
 
@@ -480,7 +479,7 @@ In addition, the governing bodies can, at any time, based on the feedback of the
 
 ---
 
-# References
+## References
 
 1. NDC Overview Slides
    ([https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing))
