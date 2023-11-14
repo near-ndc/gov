@@ -370,21 +370,14 @@ In the event a member of the TC is under investigation, they are ineligible to v
 
 However, until that member is either removed or retained, they may vote on any other issue. In the event of resignation prior to re-election, any grid-locked decision is taken as a rejection of the proposal.
 
-# **The Voting Body**
+## The Voting Body
 
-## **Composition and Eligibility**:
-
-- Represents all non-blacklisted human participants in the NEAR Ecosystem.
-- No specific requirements to be a member, except:
-  - Possession of 'I am Human' face verification SBT
-  - Not being on the blacklist.
-
-## Quorums and Thresholds:
+### Quorums and Thresholds
 
 - **Near Consent:** quorum=(7% of the voting body) + **simple majority**= `#yes > 50% * (#yes + #no + #spam)` .
 - **Near Supermajority Consent**: quorum=(12% of the voting body) + **super majority**= `#yes > 60% * (#yes + #no + #spam)`
 
-## **Powers and Responsibilities**:
+### Powers and Responsibilities
 
 - Elect members of institutions every 6 months.
 - Dissolve institutions deemed incompetent.
@@ -400,9 +393,7 @@ However, until that member is either removed or retained, they may vote on any o
   - Make distributions.
 - Ratify Setup packages.
 
-## **The Voting Body Powers**
-
-**Processes, Timelines & Key Stakeholders**
+### Processes, Timelines & Key Stakeholders
 
 | Process                                                          | Description                                                              | Votes required             | Time Frame            |     |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------- | --------------------- | --- |
@@ -422,24 +413,23 @@ However, until that member is either removed or retained, they may vote on any o
 
 ### Double Clicking On Dissolving a Governance Body:
 
-The threshold to reset an elected Governance Body - and dissolve it for new elections - for any of the three governing bodies, requires **Near Supermajority Consent**: quorum=(12% of the voting body) + **super majority**= `#yes > 60% * (#yes + #no + #spam)` of the voting body. If this vote is successful, new elections are held for the governing body, with the following week starting the candidacy period (See the governance framework for election timeframes!).
+The threshold to reset an elected Governance Body - and dissolve it for new elections - for any of the three governing bodies, requires **Near Supermajority Consent**. If this vote is successful, new elections are held for the governing body, with the following week starting the candidacy period (See the governance framework for election timeframes!).
 
 Note, this vote is done for only one governance body at a time - the voting body cannot dissolve all three houses at once. It must be three separate proposals and three separate votes.
 
-### Changes To the Governance Framework:
+### Changes To the Governance Framework
 
 Changes to the governance framework can be made in two ways:
 
 1. Via proposal and passage from the House of Merit, such that it is also NOT Vetoed by the Council of Advisors (in the usual passage).
-2. Via the voting body, with **Near Supermajority Consent**: quorum=(12% of the voting body) + **super majority**= `#yes > 60% * (#yes + #no + #spam)`. The proposal itself details out the full degree of changes made to the constitution and governance framework.
+2. Via the voting body, with **Near Supermajority Consent**. The proposal itself details out the full degree of changes made to the constitution and governance framework.
 
 The changes are then implemented in the next Congress.
 
-## **Influence on the NDC**:
+### Influence on the NDC
 
 The voting body retains a significant influence over the NDC, ensuring its ability to overturn or shape its performance.
 
----
 
 # **The Election Procedure:**
 
