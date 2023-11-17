@@ -429,6 +429,8 @@ The changes are then implemented in the next Congress.
 ### Influence on the NDC
 
 The voting body retains a significant influence over the NDC, ensuring its ability to overturn or shape its performance.
+Moreover, Voting Body can be easily used as an authority over any DAO. `FunctionCall` type can call any external contract. 
+Moreover, we encourage other DAOs to Voting Body as a conflict resolution (could be used using `Text` proposal or aforementioned `FunctionCall` if related hook is available in the DAO).
 
 ## The Election Procedure
 
