@@ -411,9 +411,16 @@ However, until that member is either removed or retained, they may vote on any o
 | Ratify Setup package                                             | Vote to ratify Setup package                                             | Near Consent               | As needed             |
 | Approve Budget                                                   | Vote to approve budget proposed by HoM                                   | Near Consent               | As needed             |
 
-### Double Clicking On Dissolving a Governance Body:
+The voting process is described in the Voting Body [contract documentation](https://github.com/near-ndc/voting-v1/tree/master/voting_body). In summary:
 
-The threshold to reset an elected Governance Body - and dissolve it for new elections - for any of the three governing bodies, requires **Near Supermajority Consent**. If this vote is successful, new elections are held for the governing body, with the following week starting the candidacy period (See the governance framework for election timeframes!).
+- Any Voting Body member can create a proposal.
+- We need to introduce an anti-spam mechanism. The proposal flow introduces two queues: pre-vote queue (proposals that require more support or congress support before reaching the voting stage) and the active queue (verified proposals, ready for voting). See [creating proposals documentation](https://github.com/near-ndc/voting-v1/tree/master/voting_body#creating-proposals).
+- Voting Body proposals are not finalized optimistically. Once in the voting stage, proposals are active until the end of the voting duration. This will give chance all members to express their opinion and provide more valuable result than simple approved / rejected (for example it also interesting to see how many people rejected a proposal even if it was eventually approved).
+- In the current implementation, users can overwrite their votes. This decision was made following the elections feedback and motivated by the fact that new analysis about a proposal can come at later stage which can change mind of the voters who voted early on.
+
+### Double Clicking On Dissolving a Governance Body
+
+The threshold to reset an elected Governance Body - and dissolve it for new elections. For any of the three governing bodies, dissolve requires **Near Supermajority Consent**. If this vote is successful, new elections are held for the governing body, with the following week starting the candidacy period (See the governance framework for election timeframes!).
 
 Note, this vote is done for only one governance body at a time - the voting body cannot dissolve all three houses at once. It must be three separate proposals and three separate votes.
 
@@ -429,7 +436,7 @@ The changes are then implemented in the next Congress.
 ### Influence on the NDC
 
 The voting body retains a significant influence over the NDC, ensuring its ability to overturn or shape its performance.
-Moreover, Voting Body can be easily used as an authority over any DAO. `FunctionCall` type can call any external contract. 
+Moreover, Voting Body can be easily used as an authority over any DAO. `FunctionCall` type can call any external contract.
 Moreover, we encourage other DAOs to Voting Body as a conflict resolution (could be used using `Text` proposal or aforementioned `FunctionCall` if related hook is available in the DAO).
 
 ## The Election Procedure
