@@ -11,12 +11,12 @@ Links:
 - V1 Governance
 
   - [V1 Governance Framework](./gov-framework.md)
-  - [Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
+  - [Presentation](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing)
 
 - [Elections](#Elections)
   - [voting details](./elections-voting.md)
 - [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0)
-- [Gov Ops Manual](https://docs.google.com/document/d/1l5g7JhaEPUMzjrzXEKw2Za5UmuRyK_9qxj-2-2CxlOE/edit?usp=drivesdk)
+- [Gov Ops Manual](https://near-ndc.notion.site/NDC-V1-Ops-Manual-914bf75675284daf8314e1a05c0a2eea)
 - [Community Treasury](./framework-v1/community-treasury.md)
 - [List of links and documents](https://thewiki.near.page/gwg-docs)
 
