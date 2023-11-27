@@ -1,10 +1,11 @@
 # A Framework for the Governing Bodies of the NEAR Digital Collective
 
-| Version: | Date:             | Status:                 |
-| -------- | ----------------- | ----------------------- |
-| v1.2     | June 2, 2023      | Publicly Visible to NDC |
-| v1.3     | October 1, 2023   | Release Candidate       |
-| v1.4     | November 14, 2023 | Full Release            |
+| Version: | Date:             | Status:                                            |
+| -------- | ----------------- | -------------------------------------------------- |
+| v1.2     | June 2, 2023      | Publicly Visible to NDC                            |
+| v1.3     | October 1, 2023   | Release Candidate                                  |
+| v1.4     | November 14, 2023 | Full Release                                       |
+| v1.4.1   | November 23, 2023 | Fixes, reconciliation and added `min_voteduration` |
 
 ## Summary
 
@@ -41,13 +42,31 @@ As this system evolves, each governing body has the ability to both support and 
 
 ### House Voting Criteria
 
-HoM, CoA and TC share the same voting mechanism. When a proposal is active, any member can vote to approve, reject or abstain.
+In this section we describe HoM, CoA and TC voting mechanism.
+
+Each house has the following voting parameters:
+
+- `approval_threshold`: minimum amount of approvals cast during the voting period to approve a proposal.
+- `vote_duration`: maximum amount of time a proposal is active for voting.
+- `min_vote_duration`: minimum amount of time a proposal is active for voting, unless all members voted. This parameter is introduced to let other members vote (and express their opinion) even if the voting result is already established.
+- `cooldown`: additional amount of time to hold off proposal approval. It's used to give extra time for veto motion.
+
+A proposal, when created, is immediately active for voting until:
+
+- all voters voted;
+- or `min_vote_duration` didn't pass and voting is result is not established;
+- or `min_vote_duration` passed and voting result is established.
+- or `vote_duration` is over.
+
+When a proposal is active, any member can vote to approve, reject or abstain.
+
+Cooldown (if non zero) starts once proposal is got at least `approval_threshold` votes and the proposal is not active. Cooldown will block the proposal to be executed, to give a authorized parties to veto it.
 
 **Approval Criteria**:
-Vote to motion must pass once with `approval_threshold` votes in favor.
+Vote to motion passes once `approval_threshold` votes in favor AND cooldown passed without any veto from authorized party.
 
 **Rejection Criteria**:
-Not a receiving `approval_threshold` votes in favor nor veto from CoA (where relevant).
+Not receiving `approval_threshold` votes in favor nor veto from CoA (where relevant). If a proposal gets enough rejection and abstain votes to make approval not possible, then it will be rejected.
 
 **Tie Breaking**:
 No Tie is possible. If a member is removed prior to next election, then a hard majority of `approval_threshold` votes in favor must still be obtained, and grid-locked is taken as a rejected Motion.
@@ -79,7 +98,7 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 
 **Tenure per Term:** 6 months.
 
-**DAO Parameters:** `approval_threshold = 4, voting_duration = 5` , `cooldown = 7`
+**DAO Parameters:** `approval_threshold = 4, vote_duration = 5 days, min_vote_duration = 3 days, cooldown = 0 days`
 
 **Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
@@ -107,9 +126,13 @@ CoA can unban a member (remove `GovBan`flag) at any time to run for future sessi
 | Meeting Attendance  | 60%               | Per Month    | Subject to Removal     | Required to maintain active status |
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 
+The Council of Advisors operates on a weekly time frame. The essence of their job is to help the HoM set ecosystem priorities in parallel to evaluating HoM and TC performance for the month prior. In the event that there is a divergence in HoM operations and the vision of the CoA, they are able to motion to block a proposal or policy from the HoM. This motion to block can take place during and/or after a proposal or action has been taken by the HoM.
+
+**Timeframe: Weekly**.
+
 ### Proposals and Voting
 
-At least 4 vote approvals are required to pass a proposal. This structure ensures that the Council of Advisors serves primarily as a safeguard against ill-advised decisions, rather than as an active governing body in the governance and implementation of proposals.
+At least `approval_threshold` approvals are required to pass a proposal. This structure ensures that the Council of Advisors serves primarily as a safeguard against ill-advised decisions, rather than as an active governing body in the governance and implementation of proposals.
 
 - Veto a HoM proposal:
   - veto must be approved by CoA before the HoM proposal cooldown finishes.
@@ -119,12 +142,6 @@ At least 4 vote approvals are required to pass a proposal. This structure ensure
   **Appeal Process to the CoA**:
   - Banned members have the right to appeal their ban to the CoA.
   - If the CoA finds in favor of the appealing member, the following technical process is initiated: a new OG SBT is minted for the member and `GovBan` flag is removed, reinstating their eligibility to run in subsequent elections.
-
-### Operations Information
-
-The Council of Advisors operates on a weekly time frame. The essence of their job is to help the HoM set ecosystem priorities in parallel to evaluating HoM and TC performance for the month prior. In the event that there is a divergence in HoM operations and the vision of the CoA, they are able to motion to block a proposal or policy from the HoM. This motion to block can take place during and/or after a proposal or action has been taken by the HoM.
-
-**Timeframe: Weekly**.
 
 #### Appeal Process
 
@@ -151,7 +168,7 @@ No appeal. Simply requires a re-submission of the vote to motion.
 
 **Tenure per Term:** 6 months.
 
-**DAO Parameters:** `approval_threshold = 8, voting_duration = 5` , `cooldown = 7 days` . Cooldown allows CoA and VB to veto a proposal during the proposal voting and after 7 days after a proposal passed. The proposal can’t be executed after the cooldown is over.
+**DAO Parameters:** `approval_threshold = 8, vote_duration = 5 days, min_vote_duration = 3 days, cooldown = 7 days` . Cooldown allows CoA and VB to veto a proposal during the proposal voting and after 7 days after a proposal passed. The proposal can’t be executed after the cooldown is over.
 
 **Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
@@ -179,6 +196,13 @@ No appeal. Simply requires a re-submission of the vote to motion.
 | Meeting Attendance  | 60%               | Per Month    | Subject to Removal     | Required to maintain active status |
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 | Proposal Creation   | 2                 | Per Term     | Subject to Removal     | Required to maintain active status |
+
+The HoM is required to meet every 2 to 3 weekdays at minimum. This allows the HoM to move quickly and iterate efficiently. Any HoM member can make a proposal and put it into motion. 8 votes in favor is required to pass. The voting period for all votes last for 5 days once they are proposed (the proposal creator decides when they are proposed).
+
+Timeframe:
+
+- Meetings at least every 2 to 3 weekdays
+- Voting is on-going and asynchronous.
 
 ### Budget **Package - 1st Order of Business:**
 
@@ -225,31 +249,10 @@ HoM can change the following params:
 
 The initial parameters are defined by the _Initial Setup Package_, which is voted by the Voting Body during Elections.
 
-### Operation Information
-
-The HoM is required to meet every 2 to 3 weekdays at minimum. This allows the HoM to move quickly and iterate efficiently. Any HoM member can make a proposal and put it into motion. 8 votes in favor is required to pass. The voting period for all votes last for 5 days once they are proposed (the proposal creator decides when they are proposed).
-
-Timeframe:
-
-- Meetings at least every 2 to 3 weekdays
-- Voting is on-going and asynchronous.
-
-#### Vote Powers
-
-- Funding Proposal. Must specify Amount, Token and Target Account (similar to Transfer Proposals, but without executing the transfer immediately)
-- Proposal for budget allocation (see **Budget Package** above)
-- Proposal for long-term strategy / Focus.
-- Proposal to Hire.
-- Proposal to change mechanics.
-
-CoA has veto power over all active proposals or recurrent.
-Voting results are not valid until the cooldown period has passed without any veto enacted.
-
 ### Setup Package - Last Order of Business
 
 <aside>
 ⚠️ this is not implemented and will require approval from HoM to implement it.
-
 </aside>
 
 [Setup Package Overview](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d4703af1fee4a89c61da1?pvs=21)
@@ -264,37 +267,42 @@ At the end of every **Congress**, the last order of business is for the HoM to c
 
 This **Setup Package** sets the precedent for how the new **Congress** will operate. Only after the **Voting Body** has passed the **Setup Package** does the HoM commence operations.
 
-### Proposals and Voting
+### Proposals
 
-Proposal lifetime: created → HoM voting → cooldown.
+Proposal lifetime: `created → HoM voting → cooldown`.
+
+CoA has veto power over all active or recurrent proposals.
+Voting Body has veto power over Funding Proposals above the big budget threshold value and Recurring Funding Proposals.
+
+#### Setup Package
 
 A **[Setup Package](https://www.notion.so/Setup-Package-Overview-6df6ec7ac92d4703af1fee4a89c61da1?pvs=21)** can be proposed by any member in either the HoM or CoA, and must then pass a simple majority by the **Voting Body** in a general election, before being implemented (1 week implementation time). A minimum of 1 **Setup Package** must be proposed prior to a general election.
-
-All other items must receive 8 votes in favor within a week in order to be implemented - and remain eligible to veto by the CoA either during the HoM voting period or during the subsequent 7 days after HoM approval (regardless of being big budget, recurring or solo).
-
-**Setup Package**:
 
 - If one **Setup Package** has been proposed, then it will be a approve or reject or abstain vote which must pass with a simple majority, i.e. more votes in favor than votes against, by the **Voting Body** in a general election.
 - If more than one **Setup Package** has been proposed then voters in the **Voting Body** will be given one vote each and can cast it either in favor of the **Setup Package** that they prefer, or can abstain. The **Setup Package** with the most votes in favor wins.
 - General elections are subject to an 8% quorum requirement, inclusive of any “abstain” votes cast.
 
-**Funding Proposals:**
+#### Funding Proposal
 
 - Each **Funding Proposal** must first fit within the confines of the parameters defined in the **Setup Package** before it can be created. The Smart Contract will validate and enforce these rules and will not allow creation of a **Funding Proposal** that violates the **Setup Package**.
-- Recurring **Funding Proposals,** and one-off **Funding Proposals** above the big budget threshold value, require 8 votes in favor in the HoM, and then a subsequent 4 votes in favor in the CoA.
+- Recurring **Funding Proposals,** and one-off **Funding Proposals** above the big budget threshold value, require 8 votes in favor in the HoM, and then a subsequent CoA approval.
 - Non recurring **Funding Proposals** below the big budget threshold value require 8 votes in favor in the HoM and the absence of a CoA veto.
 
-**Budget Proposals**
+#### Budget Proposal
 
-- Require 8 votes in favor in the HoM, and then a subsequent 4 votes in favor in the CoA
+- Require HoM [approval](#house-voting-criteria) in favor in the HoM, and then a subsequent CoA approval.
 
-**All other proposals** (i.e. the text based proposals):
+#### Proposal to change gov mechanics
 
-- Require 8 votes in favor in the HoM and the absence of a CoA veto.
+Require Voting Body approval with **Near Supermajority Consent**.
+
+#### Other proposals
+
+HoM can make Text based proposals. That should cover all proposals that don't require additional VB approval and are not covered above. Example: long term strategy (focus), hiring etc...:
 
 ### Appeal Process
 
-Re-proposal the following week
+Re-proposal the following week.
 
 ### Growth
 
@@ -315,7 +323,7 @@ After the first congress, 2 new members are added to the House of Merit each Con
 
 **Tenure per Term:** 6 months.
 
-**DAO Parameters:** `approval_threshold = 4, voting_duration = 5` , `cooldown = 0`
+**DAO Parameters:** `approval_threshold = 4, vote_duration = 5 days, min_vote_duration = 3 days, cooldown = 0`
 
 **Appointment Eligibility Criteria:** Satisfying [OG SBT](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=NDCV1-Safeguards&OGSBT&blockHeight=96512909&lastEditor=vikash.near) criteria.
 
@@ -339,7 +347,6 @@ Timeframe: To go over complaints and initiative investigations. Investigations l
 | Motion to Investigate | Open an investigation to a complaint against an individual elected to an NDC body                      | As needed, duration of investigation as needed | TC, Member under investigation |
 | Motion to Remove      | Removes a member from the post, leaving the post empty until the next election cycle                   | As needed                                      | TC, Member being removed       |
 | Motion to Ban         | Removes a member from the post, and bans that member from serving in ANY Governance post in the future | As needed                                      | TC, Member being banned        |
-|                       |                                                                                                        |                                                |                                |
 
 ### Minimum Threshold of Engagement for TC
 
@@ -348,7 +355,7 @@ Timeframe: To go over complaints and initiative investigations. Investigations l
 | Meeting Attendance  | 60%               | Per Month    | Subject to Removal     | Required to maintain active status |
 | Voting on Proposals | 70%               | Per Proposal | Subject to Removal     | Required to maintain active status |
 
-### Proposals and Voting
+### Proposals
 
 Members of the TC receive complaints and requests for investigation. Once a request is successfully considered, TC can make one of the following on chain proposals:
 
@@ -374,7 +381,7 @@ However, until that member is either removed or retained, they may vote on any o
 
 ### Quorums and Thresholds
 
-- **Near Consent:** quorum=(7% of the voting body) + **simple majority**= `#yes > 50% * (#yes + #no + #spam)` .
+- **Near Consent:** quorum=(7% of the voting body) + **simple majority**= `#yes > 50% * (#yes + #no + #spam)`.
 - **Near Supermajority Consent**: quorum=(12% of the voting body) + **super majority**= `#yes > 60% * (#yes + #no + #spam)`
 
 ### Powers and Responsibilities
