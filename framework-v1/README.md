@@ -147,10 +147,26 @@ Election results will be announced on the NDC’s Medium, Telegram, and Discord 
 
 After the election results are announced, the elected representatives will convene for the first time in the first NDC governance town hall, where we will hear from elected members from the three branches of NDC governance.
 
-## More links
+## References
 
-1. [fair-voting-policy](https://bafkreiapsavs6hrc6aomzagub7aumogkfbjewlo2tvwzesr4myshlecfqy.ipfs.nftstorage.link)
-2. [Registry docs](https://github.com/near-ndc/i-am-human/tree/master/contracts/registry#readme)
-3. [Elections smart contract](https://github.com/near-ndc/voting-v1/tree/master/elections)
-4. [I Am Human (IAH)](https://i-am-human.gitbook.io/i-am-human-docs/)
-5. [Whistleblower program](https://medium.com/@neardigitalcollective/introducing-ndc-whistleblower-bounty-program-d4fe1b9fc5a0)
+1. [NDC Overview Slides](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing)
+1. [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
+1. [NDC Trust](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/)
+1. [NEAR Constitution](./constitution.md)
+1. [Code of Conduct](https://medium.com/near-digital-collective/ndc-code-of-conduct-89589dd137ba)
+1. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
+1. [Fair Voting Policy](https://bafkreiapsavs6hrc6aomzagub7aumogkfbjewlo2tvwzesr4myshlecfqy.ipfs.nftstorage.link)
+1. [Whistleblower program](https://medium.com/@neardigitalcollective/introducing-ndc-whistleblower-bounty-program-d4fe1b9fc5a0)
+1. [Voting Body](https://github.com/near-ndc/voting-v1/tree/master/voting_body) contract implementation.
+1. [Congress](https://github.com/near-ndc/voting-v1/tree/master/congress) (HoM, CoA, TC) contract implementation.
+1. [Elections smart contract](https://github.com/near-ndc/voting-v1/tree/master/elections)
+
+### Tools:
+
+- [Astra++](https://near.org/astraplusplus.ndctools.near/widget/home?page=congress) - Congress, Voting Body, DAOs
+- [NDC Docs](https://near.org/neardigitalcollective.near/widget/NDCDocs) - post/edit final docs
+- [Easy Poll](https://near.org/easypoll-v0.ndc-widgets.near/widget/EasyPoll?page=official_polls) - Community pulse and sentiment
+- [NDC Chatbot](https://ndc-chatbot.nearhub.club/) - Ask questions
+- [Kudos](https://near.org/kudos.ndctools.near/widget/NDC.Kudos.Main) - appreciation and recognition
+- [I Am Human (IAH)](https://i-am-human.gitbook.io/i-am-human-docs/)
+- [I Am Human Registry](https://github.com/near-ndc/i-am-human/tree/master/contracts/registry#readme)

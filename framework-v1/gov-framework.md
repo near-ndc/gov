@@ -1,10 +1,10 @@
 # A Framework for the Governing Bodies of the NEAR Digital Collective
 
-| Version: | Date:             | Status:                                            |
-| -------- | ----------------- | -------------------------------------------------- |
-| v1.2     | June 2, 2023      | Publicly Visible to NDC                            |
-| v1.3     | October 1, 2023   | Release Candidate                                  |
-| v1.4     | November 14, 2023 | Full Release                                       |
+| Version: | Date:             | Status:                                             |
+| -------- | ----------------- | --------------------------------------------------- |
+| v1.2     | June 2, 2023      | Publicly Visible to NDC                             |
+| v1.3     | October 1, 2023   | Release Candidate                                   |
+| v1.4     | November 14, 2023 | Full Release                                        |
 | v1.4.1   | November 23, 2023 | Fixes, reconciliation and added `min_vote_duration` |
 
 ## Summary
@@ -495,22 +495,4 @@ In addition, the governing bodies can, at any time, based on the feedback of the
 
 ---
 
-## References
-
-1. [NDC Overview Slides](https://docs.google.com/presentation/d/1YFzsBRB-UcZYN93tDVEHUGE7uGx2OuW61PnXsNMYgPU/edit?usp=sharing)
-2. [NDC Trust](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/)
-3. [NEAR Constitution](./constitution.md)
-4. [Code of Conduct](https://bafybeifjibo3ygatrlpszzhqososzw3rlitrgdudkrc6fceo3musandgfm.ipfs.nftstorage.link)
-5. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
-6. [Fair Voting Policy](https://bafkreidwdxocdkfsv6srynw7ipnogfuw76fzncmxd5jv7furbsn5cp4bz4.ipfs.nftstorage.link/)
-7. [Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
-8. [Voting Body](https://github.com/near-ndc/voting-v1/tree/master/voting_body) contract implementation.
-9. [Congress](https://github.com/near-ndc/voting-v1/tree/master/congress) (HoM, CoA, TC) contract implementation.
-
-### Tools:
-
-- [Astra++](https://near.org/astraplusplus.ndctools.near/widget/home?page=congress) - Congress, Voting Body, DAOs
-- [NDC Docs](https://near.org/neardigitalcollective.near/widget/NDCDocs) - post/edit final docs
-- [Easy Poll](https://near.org/easypoll-v0.ndc-widgets.near/widget/EasyPoll?page=official_polls) - Community pulse and sentiment
-- [NDC Chatbot](https://ndc-chatbot.nearhub.club/) - Ask questions
-- [Kudos](https://near.org/kudos.ndctools.near/widget/NDC.Kudos.Main) - appreciation and recognition
+## [References](./README.md#references)
