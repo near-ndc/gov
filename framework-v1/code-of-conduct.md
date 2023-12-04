@@ -1,5 +1,8 @@
 # Code of Conduct
 
+Near Social [version](https://near.org/neardigitalcollective.near/widget/NDCDocs_OneArticle?articleId=CommunityGuidelines&blockHeight=91522833&lastEditor=neardigitalcollective.near
+).
+
 ## Introduction
 
 The NDC Community is made up of an amazing array of individuals and projects from different cultures and backgrounds. We strive to maintain a welcoming and respectful community for all members.
