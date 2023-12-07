@@ -13,9 +13,11 @@ Links:
   - [V1 Governance Framework](./gov-framework.md)
   - [Presentation](https://docs.google.com/presentation/d/1TxEtvXKTblO0kY7pEn54zHvPs2bX-g3i8twJCZatFGE/edit?pli=1#slide=id.g1f5a05682c7_1_60)
 
+- [NEAR Constitution](./constitution.md)
 - [Elections](#Elections)
   - [voting details](./elections-voting.md)
 - [Community Treasury](./community-treasury.md)
+- [Code of Conduct](./code-of-conduct.md)
 - [List of links and documents](https://thewiki.near.page/gwg-docs)
 
 ## Important Dates
@@ -151,8 +153,6 @@ After the election results are announced, the elected representatives will conve
 1. [Ops Manual](https://near-ndc.notion.site/NDC-V1-Ops-Manual-914bf75675284daf8314e1a05c0a2eea)
 1. [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0/edit?pli=1) (outdated)
 1. [NDC Trust](https://bafybeic5s7qbf3dlbwqesv4byzc6llwpfx2kq36xzwfknu7sskxlanellm.ipfs.nftstorage.link/)
-1. [NEAR Constitution](./constitution.md)
-1. [Code of Conduct](./code-of-conduct.md)
 1. [Declaration of Transparency and Accountability](https://bafkreid3vx2tivdlwkivezalhkscxnxakirw5nuunxce3b6ivtx4j6ac44.ipfs.nftstorage.link/)
 1. [Fair Voting Policy](https://bafkreiapsavs6hrc6aomzagub7aumogkfbjewlo2tvwzesr4myshlecfqy.ipfs.nftstorage.link)
 1. [Whistleblower program](https://medium.com/@neardigitalcollective/introducing-ndc-whistleblower-bounty-program-d4fe1b9fc5a0)
