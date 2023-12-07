@@ -15,8 +15,6 @@ Links:
 
 - [Elections](#Elections)
   - [voting details](./elections-voting.md)
-- [NDC Product Book](https://docs.google.com/document/d/1w_wfRfp-ISH7g-zu7vAFULVvRNwyLGwNIDC1EBkxvu0)
-- [Gov Ops Manual](https://near-ndc.notion.site/NDC-V1-Ops-Manual-914bf75675284daf8314e1a05c0a2eea)
 - [Community Treasury](./community-treasury.md)
 - [List of links and documents](https://thewiki.near.page/gwg-docs)
 
